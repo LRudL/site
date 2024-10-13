@@ -1,0 +1,5 @@
+TEMP_*
+src/.obsidian
+*/.vscode/*
+.vscode
+__pycache__

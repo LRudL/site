@@ -1,0 +1,298 @@
+body, html {
+    --sidebar-min-width: 350px;
+    --main-content-max-width: 900px;
+    --background-color: #fdfdfd ;
+    --text-color: #000;
+
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    max-width: 100%;
+    font-family: "Baskerville", Georgia, serif;
+    font-size: 22px;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 1rem;
+    line-height: 1.2;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    max-width: 100%;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.left {
+    flex: 0 0 var(--sidebar-min-width);
+    background-color: var(--bg-color);
+    min-width: var(--sidebar-min-width);
+    padding-right: 4em;
+}
+
+.right {
+  width: 0px;
+}
+
+.main {
+    flex: 1;
+    background-color: var(--bg-color);
+    min-width: 0;
+    max-width: 100%;
+    display: flex;
+    justify-content: center; /* Add this line */
+}
+
+.sticky-div {
+    position: sticky;
+    top: 20px;
+    padding: 20px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    scrollbar-width:thin;
+}
+
+/* Webkit browsers like Chrome, Safari */
+.sticky-div::-webkit-scrollbar {
+    width: 2px;
+}
+
+.sticky-div::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+.sticky-div::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.main .content {
+    max-width: var(--main-content-max-width);
+    width: 100%;
+    text-align: justify;
+    padding-left: 2em;
+    padding-right: 2em;
+    box-sizing: border-box;
+}
+
+/* Add this new rule */
+.main .content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em auto;
+}
+
+.collapsed-sidebar {
+    display: none;
+    background-color: var(--bg-color);
+    padding: 20px;
+}
+
+@media (max-width: 1250px) {
+    .container {
+        flex-direction: column;
+    }
+    .left, .right {
+        display: none;
+    }
+    .collapsed-sidebar {
+        display: block;
+    }
+    .main .content {
+        padding-left: 1em;
+        padding-right: 1em;
+        max-width: min(100%, var(--main-content-max-width)); /* Change this line */
+        margin: 0 auto; /* Add this line */
+    }
+    .main {
+        max-width: 100%;
+    }
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    margin-left: 1.5em;
+}
+
+a,
+a:active {
+    color: #39c;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #36c;
+    text-decoration: none;
+}
+
+/* Hover effect (optional) */
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.table-of-contents {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.table-of-contents ul {
+    list-style-type: none;
+    margin-bottom: 1.5em; /* Increase spacing between <ul> elements */
+    padding-left: 0; /* Remove default left padding */
+}
+
+.table-of-contents li {
+    line-height: 1.2; /* Decrease spacing between lines within a <li> */
+    margin-bottom: 0.5em; /* Add a small space between list items */
+}
+
+.collapsed-sidebar {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.table-of-contents .toc-h2 { padding-left: 1em; }
+.table-of-contents .toc-h3 { padding-left: 2em; }
+.table-of-contents .toc-h4 { padding-left: 3em; }
+.table-of-contents .toc-h5 { padding-left: 4em; }
+.table-of-contents .toc-h6 { padding-left: 5em; }
+
+.table-of-contents a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.table-of-contents a:hover {
+    text-decoration: underline;
+}
+
+.site-name {
+    font-size: 1.0em;
+    text-align: right;
+    color: #555;
+}
+
+.site-name a:hover {
+    text-decoration: underline;
+}
+
+.post-title {
+    text-align: center;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.heading-font {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+
+.post-meta {
+    color: #666;
+    margin-top: 0;
+    text-align: center;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 10;
+}
+
+
+/* Tab styles */
+.tab-container {
+    width: 100%;
+    margin-top: 2em;
+}
+
+.tab-container input[type="radio"] {
+    display: none;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 10px;
+    cursor: pointer;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 0.9em;
+    text-align: center;
+    border: 1px solid #ccc;
+    font-weight: 10;
+}
+
+.tab-button:hover {
+    background-color: #f0f0f0;
+}
+
+.tab-content {
+    display: none;
+}
+
+/* Show active tab content */
+#tab1:checked ~ #chronological,
+#tab2:checked ~ #type,
+#tab3:checked ~ #topic {
+    display: block;
+}
+
+/* Style for active tab button */
+#tab1:checked ~ .tab-buttons label[for="tab1"],
+#tab2:checked ~ .tab-buttons label[for="tab2"],
+#tab3:checked ~ .tab-buttons label[for="tab3"] {
+    border: 3px solid black;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .tab-buttons {
+        flex-direction: column;
+    }
+
+    .tab-button {
+        margin-bottom: 5px;
+    }
+}

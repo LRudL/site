@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block title %}Rudolf's Writing{% endblock %}
+
+{% block header %}
+<header>
+    <nav>
+        <div class="site-name heading-font">Rudolf &mdash; home page</div>
+    </nav>
+</header>
+{% endblock %}
+
+{% block left_column %}
+    {% if toc %}
+        <p class="heading-font"><strong>On this page:</strong></p>
+        <nav id="toc" class="table-of-contents">
+            <hr class="toc-separator">
+            <ul>
+                {% for item in toc %}
+                    <li class="toc-h{{ item.level }}">
+                        <a href="#{{ item.id }}">{{ item.text }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <hr class="toc-separator">
+        </nav>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <h1 class="post-title">Rudolf's writing</h1>
+
+    {% if toc %}
+        <div class="collapsed-sidebar">
+            <p><strong>On this page:</strong></p>
+            <nav id="collapsed-toc" class="table-of-contents">
+                <hr class="toc-separator">
+                <ul>
+                    {% for item in toc %}
+                        <li class="toc-h{{ item.level }}">
+                            <a href="#{{ item.id }}">{{ item.text }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <hr class="toc-separator">
+            </nav>
+        </div>
+    {% endif %}
+
+    <h2 id="section-0">Intro</h2>
+    
+    <p>This is a minimalist repository of my writing.</p>
+    <p>I also publish my writing on Substack at <a href="https://babbleunpruned.substack.com/">TODO SUBSTACK LINK</a>, which is where you can subscribe for updates.</p>
+    <p>(An external non-Substack site was a necessity caused by Substack's lack of support for inline LaTeX, though the idea was also fanned by my cranky perfectionism about high-performance, zero-bloat web design.)</p>
+    <h2 id="section-1">Archive</h2>
+    <p>NOTE: archives from my <a href="https://www.strataoftheworld.com/">old site</a> are still being ported over.</p>
+    <div class="tab-container">
+        <input type="radio" id="tab1" name="tabs" checked>
+        <input type="radio" id="tab2" name="tabs">
+        <input type="radio" id="tab3" name="tabs">
+        
+        <div class="tab-buttons">
+            <label for="tab1" class="tab-button">Latest</label>
+            <label for="tab2" class="tab-button">Type</label>
+            <label for="tab3" class="tab-button">Topic</label>
+        </div>
+
+        <div class="tab-content" id="chronological">
+            {% for year_group in posts_by_year %}
+                <p><strong>{{ year_group.year }} </strong></p>
+                <ul>
+                {% for post in year_group.posts %}
+                    <li><a href="{{ post.meta.label }}">{{ post.meta.title }}</a></li>
+                {% endfor %}
+                </ul>
+            {% endfor %}
+        </div>
+
+        <div class="tab-content" id="type">
+            {% for post_group in posts_by_type %}
+                <p><strong>{{ post_group.type }}</strong></p>
+                <ul>
+                    {% for post in post_group.posts %}
+                        <li><a href="{{ post.meta.label }}">{{ post.meta.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </div>
+
+        <div class="tab-content" id="topic">
+            {% for tag_group in posts_by_tag %}
+                <p><strong>{{ tag_group.tag }}</strong></p>
+                <ul>
+                    {% for post in tag_group.posts %}
+                        <li><a href="{{ post.meta.label }}">{{ post.meta.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </div>
+    </div>
+
+    <h2 id="section-2">About</h2>
+    <img src="assets/earth.jpg" alt="Earthrise, Apollo 8 crew, 1968">
+    <center><caption>Earthrise, Apollo 8 crew, 1968</caption></center>
+{% endblock %}

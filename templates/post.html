@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.meta.title }} - Rudolf's Writing{% endblock %}
+
+{% block description %}{{ post.meta.description }}{% endblock %}
+
+{% block header %}
+<header>
+    <nav>
+        <div class="site-name heading-font">Rudolf &mdash; <a href="{{ '../' if not is_index else '' }}">home page</a></div>
+    </nav>
+</header>
+{% endblock %}
+
+{% block left_column %}
+    {% if toc %}
+        <nav id="toc" class="table-of-contents">
+            <hr class="toc-separator">
+            <ul>
+                {% for item in toc %}
+                    <li class="toc-h{{ item.level }}">
+                        <a href="#{{ item.id }}">{{ item.text }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <hr class="toc-separator">
+        </nav>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <article>
+        <h2 class="post-title">{{ post.meta.title }}</h2>
+        <div class="post-meta">
+            {% if post.meta.coauthors %}
+            <p>Co-authors: {{ post.meta.coauthors | join(', ') }}</p>
+            {% endif %}
+            <p><time datetime="{{ post.meta.date }}">{{ post.meta.date }}</time></p>
+        </div>
+        
+        {% if toc %}
+            <div class="collapsed-sidebar">
+                <nav id="collapsed-toc" class="table-of-contents">
+                    <hr class="toc-separator">
+                    <ul>
+                        {% for item in toc %}
+                            <li class="toc-h{{ item.level }}">
+                                <a href="#{{ item.id }}">{{ item.text }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    <hr class="toc-separator">
+                </nav>
+            </div>
+        {% endif %}
+        
+        {{ post_content | safe }}
+    </article>
+{% endblock %}

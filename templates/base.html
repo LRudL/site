@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block description %}A minimalist blog about various topics{% endblock %}">
+    <title>{% block title %}Rudolf's Writing{% endblock %}</title>
+    {% if use_mathjax %}
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    {% endif %}
+    <link rel="stylesheet" href="{{ '../' if not is_index else '' }}css/style.css">
+</head>
+<body>
+    {% block header %}
+    {% endblock %}
+    <div class="container">
+        <div class="column left">
+            <div class="sticky-div">
+                {% block left_column %}{% endblock %}
+            </div>
+            <div class="content"></div>
+        </div>
+        <div class="column main">
+            <div class="collapsed-sidebar">
+                {% block collapsed_sidebar %}{% endblock %}
+            </div>
+            <div class="content">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+        <!--<div class="column right">
+            <div class="sticky-div">
+                {% block right_column %}{% endblock %}
+            </div>
+            <div class="content"></div>
+        </div>-->
+    </div>
+    <hr>
+    <footer></footer>
+</body>
+</html>
