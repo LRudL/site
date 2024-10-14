@@ -1,3 +1,33 @@
+- label: wisdom1
+  title: "AI & wisdom 1: wisdom, amortised optimisation, and AI"
+  date: 2024-10-12
+  description: A lot of wisdom is about mental qualities shaped more by amortised optimisation than direct optimisation. Direct optimisation is solving problems by searching through alternatives on the fly, while amortised optimisation is solving a problem by applying past data and computation. LLMs are products of amortised optimisation, but can be used for direct optimisation.
+  math: true
+  type: ["general"]
+  tags: ["civilisation"]
+  sequel: wisdom2
+
+
+- label: wisdom2
+  title: "AI & wisdom 2: growth and amortised optimisation"
+  date: 2024-10-13
+  description: Amortised optimisation matters more when growth and change are slow, so the relative importance of it will likely decline with the growth and changed caused by AI. However, a model suggests it's hard for amortised optimisation to entirely decline in relevance.
+  math: true
+  type: ["general"]
+  tags: ["civilisation"]
+  sequel: wisdom3
+  prequel: wisdom1
+
+
+- label: wisdom3
+  title: "AI & wisdom 3: AI effects on amortised optimisation"
+  date: 2024-10-14
+  description: Human amortised optimisation is enabled by things like cultural evolution and written knowledge. Advanced AI may weaken human cultural evolution, but may themselves be very good at it due to their low copying costs. AIs might help humans distil insights from written knowledge, but ultimately replace the need for it.
+  math: true
+  type: ["general"]
+  tags: ["civilisation", "AI"]
+  prequel: wisdom2
+
 - label: infotheory1
   title: Information Theory 1
   date: 2022-06-20
