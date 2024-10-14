@@ -26,7 +26,7 @@ Changes in the ratio $r = A(T) / I(T)$ will tell us something about whether dire
 
 The graph below shows an example of how $r$ (dotted black) changes after $I(T)$ (green) switches from no growth to exponential growth, assuming the relevance of built-up optimisation results slowly but exponentially fades over time, with all units and scales arbitrary:
 
-![](img/wisdom2/table.png)
+![](img/wisdom2/graph.png)
 
 (note the log scale on the y-axis)
 
@@ -56,7 +56,7 @@ The only exceptions to the ratio settling to a constant are that we get polynomi
 
 Visually (the line going up mean amortised optimisation getting more important over time):
 
-![[Pasted image 20241013133721.png]]
+![](img/wisdom2/table.png)
 
 This means that in this vastly-simplified model, it's very hard for direct optimisation to make amortised optimisation irrelevant (there are no lines that go down). However, it also requires fairly specific conditions for amortised optimisation to dominate in the limit (most scenarios level off).
 
