@@ -212,23 +212,29 @@
 </li>
 </ul>
 <h3 id="section-3">Connecting amortised optimisation to wisdom</h3>
-<p>Let's return to our list of intelligence v wisdom properties from above, and see how well they map onto direct v amortised optimisation:
-- fast v slow: direct optimisation relies on being fast at evaluating many options on-the-fly, amortised does not
-- novelty vs distillation: amortised optimisation is inherently about distilling prior experience, which makes direct optimisation better for finding novel solutions
-- young v old: speed is an advantage of youth and required for direct optimisation; experience / training data are an advantage of age and what's required for amortised optimisation
-- fluid intelligence v crystallised intelligence: just read the first paragraph of the <a href="https://en.wikipedia.org/wiki/Fluid_and_crystallized_intelligence">Wikipedia article</a>
-- analysis v synthesis: analysis often relies on direct search through &amp; comparison of alternatives, which sounds a lot like direct optimisation; synthesis is essentially distillation
-- legible / verifiable v illegible / hard to verify: direct optimisation often naturally comes with an explanation in terms of "I searched this set of options, and this one seemed best"; amortised optimisation gives you a compressed approximation of some data that might be totally opaque
-- done alone v learned from elders/culture
-    - amortised optimisation is strongest when it can take advantage of a large pool of examples and training data, and there is no requirement that it has to be <em>your</em> data that you learn from
-    - direct optimisation involves running an <em>internal</em> search process
-- small steps well v large things right</p>
+<p>Let's return to our list of intelligence v wisdom properties from above, and see how well they map onto direct v amortised optimisation:</p>
+<ul>
+<li>fast v slow: direct optimisation relies on being fast at evaluating many options on-the-fly, amortised does not</li>
+<li>novelty vs distillation: amortised optimisation is inherently about distilling prior experience, which makes direct optimisation better for finding novel solutions</li>
+<li>young v old: speed is an advantage of youth and required for direct optimisation; experience / training data are an advantage of age and what's required for amortised optimisation</li>
+<li>fluid intelligence v crystallised intelligence: just read the first paragraph of the <a href="https://en.wikipedia.org/wiki/Fluid_and_crystallized_intelligence">Wikipedia article</a></li>
+<li>analysis v synthesis: analysis often relies on direct search through &amp; comparison of alternatives, which sounds a lot like direct optimisation; synthesis is essentially distillation</li>
+<li>legible / verifiable v illegible / hard to verify: direct optimisation often naturally comes with an explanation in terms of "I searched this set of options, and this one seemed best"; amortised optimisation gives you a compressed approximation of some data that might be totally opaque</li>
+<li>done alone v learned from elders/culture<ul>
+<li>amortised optimisation is strongest when it can take advantage of a large pool of examples and training data, and there is no requirement that it has to be <em>your</em> data that you learn from</li>
+<li>direct optimisation involves running an <em>internal</em> search process</li>
+</ul>
+</li>
+<li>small steps well v large things right</li>
+</ul>
 <p>The last one is perhaps the least-obvious, but also most important one. I will justify this in a later part.</p>
-<p>To return to our examples of wisdom from before:
-- In <em>The Secrets of Our Success</em> (see reviews <a href="https://slatestarcodex.com/2019/06/04/book-review-the-secret-of-our-success/">here</a> or <a href="https://www.thepsmiths.com/p/review-the-secret-of-our-success">here</a>), the case is made, again and again, that humanity's impressiveness and ability to survive is built on cultural evolution - people copying and tweaking successful behaviours over time - rather than our ability to think up things on the spot.
-- If you dig into <a href="https://www.lesswrong.com/posts/NyGgegFATfsyuGFo4/a-model-of-research-skill">what traits it takes to do good research</a>, the most valuable ability is research taste: the ability to choose directions wisely based on an accumulated intuition.
-- Making wise decisions about policy, whether in the Cuban Missile Crisis or otherwise, often has underlying factors that look less like difficult on-the-fly calculations, and more like lots of experience and careful consideration of precedent.
-- You don't search over the space of wise quotes or good heuristics in your head to get advice; instead, you remember and apply ones you've heard.</p>
+<p>To return to our examples of wisdom from before:</p>
+<ul>
+<li>In <em>The Secrets of Our Success</em> (see reviews <a href="https://slatestarcodex.com/2019/06/04/book-review-the-secret-of-our-success/">here</a> or <a href="https://www.thepsmiths.com/p/review-the-secret-of-our-success">here</a>), the case is made, again and again, that humanity's impressiveness and ability to survive is built on cultural evolution - people copying and tweaking successful behaviours over time - rather than our ability to think up things on the spot.</li>
+<li>If you dig into <a href="https://www.lesswrong.com/posts/NyGgegFATfsyuGFo4/a-model-of-research-skill">what traits it takes to do good research</a>, the most valuable ability is research taste: the ability to choose directions wisely based on an accumulated intuition.</li>
+<li>Making wise decisions about policy, whether in the Cuban Missile Crisis or otherwise, often has underlying factors that look less like difficult on-the-fly calculations, and more like lots of experience and careful consideration of precedent.</li>
+<li>You don't search over the space of wise quotes or good heuristics in your head to get advice; instead, you remember and apply ones you've heard.</li>
+</ul>
 <h2 id="section-4">Optimised artefacts</h2>
 <p>If you look at a Haskell function that sorts lists, or the xylem inside a tree that transport water up, it feels clear that they're the results of some optimisation process. They're just too unlikely otherwise; a random walk through some relevant reference space, like the set of all strings that are syntactically-valid Lisp programs of a certain length, or the set of ways that you can arrange the molecules in a tree, would be extremely unlikely to hit something as "useful". Call such things <strong>optimised artefacts</strong>.</p>
 <p>(These are both examples of fairly physical optimised artefacts, but things like decisions, plans, and ideas can be optimised artefacts without any physical realisation.)</p>

@@ -59,6 +59,7 @@ Below, I'll expand on these. The maths (which [is different](https://www.lesswro
 ### Connecting amortised optimisation to wisdom
 
 Let's return to our list of intelligence v wisdom properties from above, and see how well they map onto direct v amortised optimisation:
+
 - fast v slow: direct optimisation relies on being fast at evaluating many options on-the-fly, amortised does not
 - novelty vs distillation: amortised optimisation is inherently about distilling prior experience, which makes direct optimisation better for finding novel solutions
 - young v old: speed is an advantage of youth and required for direct optimisation; experience / training data are an advantage of age and what's required for amortised optimisation
@@ -73,6 +74,7 @@ Let's return to our list of intelligence v wisdom properties from above, and see
 The last one is perhaps the least-obvious, but also most important one. I will justify this in a later part.
 
 To return to our examples of wisdom from before:
+
 - In *The Secrets of Our Success* (see reviews [here](https://slatestarcodex.com/2019/06/04/book-review-the-secret-of-our-success/) or [here](https://www.thepsmiths.com/p/review-the-secret-of-our-success)), the case is made, again and again, that humanity's impressiveness and ability to survive is built on cultural evolution - people copying and tweaking successful behaviours over time - rather than our ability to think up things on the spot.
 - If you dig into [what traits it takes to do good research](https://www.lesswrong.com/posts/NyGgegFATfsyuGFo4/a-model-of-research-skill), the most valuable ability is research taste: the ability to choose directions wisely based on an accumulated intuition.
 - Making wise decisions about policy, whether in the Cuban Missile Crisis or otherwise, often has underlying factors that look less like difficult on-the-fly calculations, and more like lots of experience and careful consideration of precedent.

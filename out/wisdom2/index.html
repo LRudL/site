@@ -115,10 +115,12 @@
 <p>If AI accelerates the rate of change and growth, both the importance of direct optimisation, and the cultural weighting of it, may get more extreme. This will happen regardless of what sort of optimisation the AI itself is doing.</p>
 <p><em>(The following has some maths - for the key takeaways, it's enough to look at the last figure, with the 3x3 grid of line graphs.)</em></p>
 <p>We can try to roughly model this. Let $I(T)$ represent the amount of "intelligence" - direct attempts at optimisation by actors in the world - at some time $T$. Historically, $I(T)$ has probably tracked population trends, though would also have effects from education, human capital, and productivity. Let $A(T)$ be the stock of results available for amortised optimisation - civilisation's total track record of accumulated knowledge, experience, and solutions. A simple relation would be that $A(T)$ is the sum of all prior direct optimisation - $A(T) = \int_0^T I(t) \mathrm{d}t$.</p>
-<p>However, some knowledge becomes less relevant with time. We'll incorporate this by changing our model to $A(T) = \int_0^T I(t) f_T(t) \mathrm{d}t$, where $f_T(t)$ is a number between 0 and 1 measuring what fraction of the results $I(t)$ generated at time $t$ are still relevant at current time $T$. For example, here are some settings:
-- no decay: $f_T(t) = 1$ (to recover the case where results of direct optimisation never become irrelevant)
-- time-bounded: $f_T(t) = \mathbb{1}_{T - t &lt; B}$ (that nothing from more than $B$ time ago is still relevant)
-- exponential decay: $f_T(t) = e^{-D(T - t)}$ (exponentially-declining relevance with some constant $D$).</p>
+<p>However, some knowledge becomes less relevant with time. We'll incorporate this by changing our model to $A(T) = \int_0^T I(t) f_T(t) \mathrm{d}t$, where $f_T(t)$ is a number between 0 and 1 measuring what fraction of the results $I(t)$ generated at time $t$ are still relevant at current time $T$. For example, here are some settings:</p>
+<ul>
+<li>no decay: $f_T(t) = 1$ (to recover the case where results of direct optimisation never become irrelevant)</li>
+<li>time-bounded: $f_T(t) = \mathbb{1}_{T - t &lt; B}$ (that nothing from more than $B$ time ago is still relevant)</li>
+<li>exponential decay: $f_T(t) = e^{-D(T - t)}$ (exponentially-declining relevance with some constant $D$).</li>
+</ul>
 <p>(In addition to someone somewhere doing direct optimisation, the random course of events can add to the stockpile of knowledge and results. This includes data about natural phenomenon, chance discoveries, and chance controlled trials. However, such things are likely either constant, or then increasing in proportion with more direct efforts - since the more attempted optimisation is going on in the world, the more interesting chance data there is to observe - so this should not change the fundamental dynamics, and we'll ignore this.)</p>
 <p>Changes in the ratio $r = A(T) / I(T)$ will tell us something about whether direct or amortised optimisation is becoming more important. The higher $r$ is, the more cases there are where you're better off doing amortised optimisation that relies on civilisation's accumulated wisdom. The lower $r$ is, the better a bet direct optimisation is. (Note that specific values of the ratio $r$ don't mean anything; for example there's nothing special about $r=1$, all we care about are changes in $r$)</p>
 <p>The graph below shows an example of how $r$ (dotted black) changes after $I(T)$ (green) switches from no growth to exponential growth, assuming the relevance of built-up optimisation results slowly but exponentially fades over time, with all units and scales arbitrary:</p>
@@ -133,7 +135,7 @@ $$
 \text{exponential growth} &amp; \mathcal{O}(1) &amp; \mathcal{O}(1) &amp; \mathcal{O}(1) \\
 }
 $$</p>
-<p>**In more detail: the dominant term (and the order of any convergence speed term) in the $T \to \infty$ limit of $r = A(T)/I(T)$:
+<p><strong>In more detail: the dominant term (and the order of any convergence speed term) in the $T \to \infty$ limit of $r = A(T)/I(T)$</strong>:
 $$
 \array{&amp; \text{decay 1} &amp; \text{decay } \mathbb{1}_{T-t&lt;B} &amp; \text{decay } e^{-D(T-t)} \\
 \text{growth } C &amp; T &amp; B &amp; \frac{1}{D} - \mathcal{O} \left(e^{-DT}\right) \\

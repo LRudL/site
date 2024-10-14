@@ -16,6 +16,7 @@ If AI accelerates the rate of change and growth, both the importance of direct o
 We can try to roughly model this. Let $I(T)$ represent the amount of "intelligence" - direct attempts at optimisation by actors in the world - at some time $T$. Historically, $I(T)$ has probably tracked population trends, though would also have effects from education, human capital, and productivity. Let $A(T)$ be the stock of results available for amortised optimisation - civilisation's total track record of accumulated knowledge, experience, and solutions. A simple relation would be that $A(T)$ is the sum of all prior direct optimisation - $A(T) = \int_0^T I(t) \mathrm{d}t$.
 
 However, some knowledge becomes less relevant with time. We'll incorporate this by changing our model to $A(T) = \int_0^T I(t) f_T(t) \mathrm{d}t$, where $f_T(t)$ is a number between 0 and 1 measuring what fraction of the results $I(t)$ generated at time $t$ are still relevant at current time $T$. For example, here are some settings:
+
 - no decay: $f_T(t) = 1$ (to recover the case where results of direct optimisation never become irrelevant)
 - time-bounded: $f_T(t) = \mathbb{1}_{T - t < B}$ (that nothing from more than $B$ time ago is still relevant)
 - exponential decay: $f_T(t) = e^{-D(T - t)}$ (exponentially-declining relevance with some constant $D$).
@@ -41,7 +42,7 @@ $$
 }
 $$
 
-**In more detail: the dominant term (and the order of any convergence speed term) in the $T \to \infty$ limit of $r = A(T)/I(T)$:
+**In more detail: the dominant term (and the order of any convergence speed term) in the $T \to \infty$ limit of $r = A(T)/I(T)$**:
 $$
 \array{& \text{decay 1} & \text{decay } \mathbb{1}_{T-t<B} & \text{decay } e^{-D(T-t)} \\
 \text{growth } C & T & B & \frac{1}{D} - \mathcal{O} \left(e^{-DT}\right) \\
