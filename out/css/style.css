@@ -235,7 +235,19 @@ h2, h3, h4, h5, h6 {
     text-align: center;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 10;
+    font-size: 0.9em;
 }
+
+
+.post-summary {
+    text-align: left;
+}
+
+.footer {
+    text-align: left;
+    font-size: 0.9em;
+}
+
 
 
 /* Tab styles */
@@ -298,3 +310,11 @@ h2, h3, h4, h5, h6 {
         margin-bottom: 5px;
     }
 }
+
+/* make quotes italicised */
+blockquote {
+    font-style: italic;
+    color: #333;
+}
+
+

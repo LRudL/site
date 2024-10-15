@@ -12,6 +12,7 @@ import shutil
 from bs4 import BeautifulSoup
 from itertools import groupby
 from operator import attrgetter
+from urllib.parse import urlparse
 
 @dataclass
 class PostMeta:
@@ -26,6 +27,7 @@ class PostMeta:
     coauthors: list[str] | None = None # a list of coauthors
     prequel: str | None = None # label of the post that is the prequel to this one
     sequel: str | None = None # label of the post that is the sequel to this one
+    elsewhere: list[str] | None = None # a list of links to other places where this post has been published
 
 @dataclass
 class Post:
@@ -228,7 +230,7 @@ def generate_post_pages(env: Environment, md: markdown.Markdown, posts: list[Pos
         post_content = prepare_post_content(post, md)
         toc, post_content_html = generate_toc(post_content)
         
-        post_html = render_post_content(post_template, post, post_content_html, toc, context)
+        post_html = render_post_content(post_template, post, post_content_html, toc, context, posts)
         
         post_dir = os.path.join(out_dir, post.meta.label)
         os.makedirs(post_dir, exist_ok=True)
@@ -239,13 +241,18 @@ def prepare_post_content(post: Post, md: markdown.Markdown):
     post_content_html = md.convert(post.content)
     return post_process_latex(post_content_html)
 
-def render_post_content(template: Template, post: Post, post_content_html: str, toc: list[dict[str, str]], context: dict):
+def render_post_content(template: Template, post: Post, post_content_html: str, toc: list[dict[str, str]], context: dict, posts: list[Post]):
+    # don't include old blog in "elsewhere" category
+    post.meta.elsewhere = [link for link in post.meta.elsewhere if ("www.strataoftheworld.com" not in link and "strataoftheworld.blogspot.com" not in link)] if post.meta.elsewhere else None
+
     return template.render(
         post=post,
         post_content=post_content_html,
         use_mathjax=post.meta.math,
         is_index=False,
         toc=toc,
+        get_post_title=lambda label: get_post_title(label, posts),
+        get_domain=get_domain,
         **context
     )
 
@@ -265,6 +272,15 @@ def main():
     posts = load_posts()
     generate_html(posts)
     copy_css()
+
+def get_post_title(label: str, posts: list[Post]) -> str:
+    for post in posts:
+        if post.meta.label == label:
+            return post.meta.title
+    return label  # fallback to label if title not found
+
+def get_domain(url: str) -> str:
+    return urlparse(url).netloc
 
 if __name__ == "__main__":
     main()

@@ -1,12 +1,21 @@
+- label: sad
+  title: "Me, Myself, and AI: The Situational Awareness Dataset (SAD) for LLMs"
+  date: 2024-07-08
+  description: "We build a comprehensive benchmark to measure situational awareness in LLMs. It consists of 16 tasks, which we group into 7 categories and 3 aspects of situational awareness (self-knowledge, situational inferences, and taking actions)."
+  math: false
+  type: ["project reports"]
+  tags: ["AI"]
+  coauthors: ["Bilal Chughtai", "Jan Betley", "Kaivu Hariharan", "Jeremy Scheurer", "Mikita Balesni", "Alex Meinke", "Marius Hobbhahn", "Owain Evans"]
+  elsewhere: ["https://www.lesswrong.com/posts/YsCRXZYr5DcJ84XHq/me-myself-and-ai-the-situational-awareness-dataset-sad-for"]
+
 - label: wisdom1
   title: "AI & wisdom 1: wisdom, amortised optimisation, and AI"
   date: 2024-10-12
-  description: A lot of wisdom is about mental qualities shaped more by amortised optimisation than direct optimisation. Direct optimisation is solving problems by searching through alternatives on the fly, while amortised optimisation is solving a problem by applying past data and computation. LLMs are products of amortised optimisation, but can be used for direct optimisation.
+  description: A lot of what we call wisdom is about mental qualities shaped more by amortised optimisation than direct optimisation. Direct optimisation is solving problems by searching through alternatives on the fly, while amortised optimisation is solving a problem by applying past data and computation.
   math: true
   type: ["general"]
   tags: ["civilisation"]
   sequel: wisdom2
-
 
 - label: wisdom2
   title: "AI & wisdom 2: growth and amortised optimisation"
@@ -18,11 +27,10 @@
   sequel: wisdom3
   prequel: wisdom1
 
-
 - label: wisdom3
   title: "AI & wisdom 3: AI effects on amortised optimisation"
   date: 2024-10-14
-  description: Human amortised optimisation is enabled by things like cultural evolution and written knowledge. Advanced AI may weaken human cultural evolution, but may themselves be very good at it due to their low copying costs. AIs might help humans distil insights from written knowledge, but ultimately replace the need for it.
+  description: Human amortised optimisation is enabled by things like cultural evolution and written knowledge. Advanced AI may weaken human cultural evolution, but may themselves be very good at it due to their low copying costs. AIs might help humans distil insights from written knowledge, but ultimately replace the need for it. I also discuss trying to use AI to avoid large-scale strategy or framing errors. 
   math: true
   type: ["general"]
   tags: ["civilisation", "AI"]
@@ -36,7 +44,7 @@
   type: ["technical"]
   tags: ["maths"]
   sequel: "infotheory2"
-  prequel: "infotheory1"
+  elsewhere: ["https://www.strataoftheworld.com/2022/06/information-theory-1.html"]
 
 - label: infotheory2
   title: Information Theory 2
@@ -46,15 +54,18 @@
   type: ["technical"]
   tags: ["maths"]
   prequel: "infotheory1"
+  sequel: "infotheory3"
+  elsewhere: ["https://www.strataoftheworld.com/2022/06/information-theory-2-source-coding.html"]
 
 - label: infotheory3
   title: "Information Theory 3"
-  date: 2022-06-25
+  date: 2022-06-26
   description: "Notes on channel coding, a big branch of information theory that deals with storing information in error-resistant ways, including an overview of Hamming codes, and a proof of the channel coding theorem."
   math: true
   type: ["technical"]
   tags: ["maths"]
   prequel: "infotheory2"
+  elsewhere: ["https://www.strataoftheworld.com/2022/06/information-theory-3-channel-coding.html"]
 
 - label: sicp
   title: "Review: Structure and Interpretation of Computer Programs"
@@ -63,6 +74,7 @@
   math: false
   type: ["book reviews", "nonfiction"]
   tags: ["computing"]
+  elsewhere: ["https://strataoftheworld.blogspot.com/2019/09/review-structure-and-interpretation-of.html", "https://www.lesswrong.com/posts/GAqCiWJBttazYGsJR/review-structure-and-interpretation-of-computer-programs"]
 
 - label: doomsday-machine
   title: "Review: The Doomsday Machine"
@@ -71,6 +83,7 @@
   math: false
   type: ["book reviews", "nonfiction"]
   tags: ["history"]
+  elsewhere: ["https://strataoftheworld.blogspot.com/2020/04/review-doomsday-machine.html", "https://forum.effectivealtruism.org/posts/surPpSDrbnoxwreEd/book-review-the-doomsday-machine-1"]
 
 - label: where-is-my-flying-car
   title: "Review: Where is my Flying Car?"
@@ -79,6 +92,7 @@
   math: false
   type: ["book reviews", "nonfiction"]
   tags: ["civilisation"]
+  elsewhere: ["https://strataoftheworld.blogspot.com/2021/03/review-where-is-my-flying-car.html"]
 
 - label: internationalists
   title: "Review: The Internationalists"
@@ -87,6 +101,7 @@
   math: false
   type: ["book reviews", "nonfiction"]
   tags: ["history"]
+  elsewhere: ["https://strataoftheworld.blogspot.com/2018/06/review-internationalists-oona-hathaway.html"]
 
 - label: godel-escher-bach
   title: "Review: Gödel, Escher, Bach"
@@ -95,6 +110,7 @@
   math: true
   type: ["book reviews", "nonfiction"]
   tags: ["computing"]
+  elsewhere: ["https://strataoftheworld.blogspot.com/2018/04/review-godel-escher-bach-eternal-golden.html"]
 
 - label: short-reviews-biographies-1
   title: "Short reviews - biographies - 1"
@@ -103,6 +119,7 @@
   math: false
   type: ["book reviews", "nonfiction"]
   tags: ["history"]
+  elsewhere: ["https://strataoftheworld.blogspot.com/2021/09/short-reviews-biographies.html"]
 
 - label: pleasures-of-counting
   title: "Review: The Pleasures of Counting"
@@ -111,6 +128,7 @@
   math: true
   type: ["book reviews", "nonfiction"]
   tags: ["computing"]
+  elsewhere: ["https://strataoftheworld.blogspot.com/2019/08/review-pleasures-of-counting.html"]
 
 - label: seeds-of-science
   title: "Review: Seeds of Science"
@@ -119,6 +137,7 @@
   math: false
   type: ["book reviews", "nonfiction"]
   tags: ["civilisation"]
+  elsewhere: ["https://strataoftheworld.blogspot.com/2018/12/review-seeds-of-science-why-we-got-it.html"]
 
 - label: foragers-farmers-fossil-fuels
   title: "Review: Foragers, Farmers, and Fossil Fuels"
@@ -127,6 +146,17 @@
   math: false
   type: ["book reviews", "nonfiction"]
   tags: ["civilisation", "history"]
+  elsewhere: ["https://strataoftheworld.blogspot.com/2020/12/review-foragers-farmers-and-fossil-fuels.html", "https://www.lesswrong.com/posts/nsFpCGPJ6dfk9uFkR/review-foragers-farmers-and-fossil-fuels"]
+
+- label: understanding-distributional-shift
+  title: "Understanding and controlling auto-induced distributional shift"
+  date: 2021-12-13
+  description: "The input distribution of a supervised machine learning system is modeled as an unchanging thing, and even in reinforcement learning there are types of distributional shift we want to avoid. However, ML systems are part of the world, and often have incentives for changing the distribution of data they act on (for example, changing the set of users or the preferences of those users in an online content recommendation system such that the users become easier to satisfy). A paper by Krueger, Maharaj, and Leike explores such concerns, and especially whether ML systems end up acting on incentives for distributional shift. They invent simple scenarios and see what training setups lead to agents non-myopically act to shift the future distribution, and find that introducing meta-learning alone is enough to cause this, and that sometimes the choice of learning algorithm (e.g. policy gradient vs Q-learning) has perhaps surprising effects on whether or not such incentives are taken. The paper proposes shuffling agents between environments as a solution, but this has its flaws. The topic relates to some concerns with embedded agents and especially myopia."
+  math: true
+  type: ["technical"]
+  tags: ["AI", "computing"]
+  elsewhere: ["https://www.lesswrong.com/posts/rTYGMbmEsFkxyyXuR/understanding-and-controlling-auto-induced-distributional", "https://alignmentforum.org/posts/rTYGMbmEsFkxyyXuR/understanding-and-controlling-auto-induced-distributional"]
+
 
 - label: nand-to-tetris
   title: "Review: From NAND To Tetris"
@@ -135,6 +165,7 @@
   math: false
   type: ["book reviews", "nonfiction"]
   tags: ["computing"]
+  elsewhere: ["https://strataoftheworld.blogspot.com/2019/08/review-from-nand-to-tetris.html"]
 
 - label: enlightenment-now
   title: "Review: Enlightenment Now"
@@ -143,6 +174,7 @@
   math: false
   type: ["book reviews", "nonfiction"]
   tags: ["civilisation"]
+  elsewhere: ["https://strataoftheworld.blogspot.com/2018/08/review-enlightenment-now-steven-pinker.html"]
 
 - label: amusing-ourselves-to-death
   title: "Review: Amusing Ourselves to Death"
@@ -151,6 +183,7 @@
   math: false
   type: ["book reviews", "nonfiction"]
   tags: ["civilisation"]
+  elsewhere: ["https://strataoftheworld.blogspot.com/2019/08/review-amusing-ourselves-to-death.html", "https://www.lesswrong.com/posts/Pix8haJTbkuxPtxpb/review-amusing-ourselves-to-death"]
 
 - label: energy-and-civilization
   title: "Review: Energy and Civilization: A History"
@@ -160,6 +193,7 @@
   type: ["book reviews", "nonfiction"]
   tags: ["history", "civilisation"]
   sequel: energy-and-civilization-more
+  elsewhere: ["https://strataoftheworld.blogspot.com/2018/10/review-energy-and-civilization-history.html"]
 
 - label: energy-and-civilization-more
   title: "Review addendum: More energy and more civilization"
@@ -169,6 +203,7 @@
   type: ["book reviews", "nonfiction"]
   tags: ["history", "civilisation"]
   prequel: "energy-and-civilization"
+  elsewhere: ["https://strataoftheworld.blogspot.com/2018/10/more-energy-and-more-civilization.html"]
 
 - label: short-reviews-nonfiction-1
   title: "Short reviews: nonfiction (1)"
@@ -185,6 +220,7 @@
     - "Founders at Work"
     - "The Great Leveler: Violence and the History of Inequality"
     - "The Strategy of Conflict"
+  elsewhere: ["https://strataoftheworld.blogspot.com/2020/05/short-reviews-non-fiction.html"]
 
 - label: diaspora
   title: "Review: Diaspora"
@@ -193,6 +229,7 @@
   math: false
   type: ["book reviews", "fiction"]
   tags: ["physics"]
+  elsewhere: ["https://strataoftheworld.blogspot.com/2019/05/review-diaspora-greg-egan.html"]
 
 - label: permutation-city
   title: "Review: Permutation City"
@@ -201,6 +238,7 @@
   math: false
   type: ["book reviews", "fiction"]
   tags: ["computing"]
+  elsewhere: ["https://strataoftheworld.blogspot.com/2018/05/review-permutation-city-greg-egan.html"]
 
 - label: baroque-cycle
   title: "Review: The Baroque Cycle"
@@ -209,6 +247,7 @@
   math: false
   type: ["book reviews", "fiction"]
   tags: ["history"]
+  elsewhere: ["https://strataoftheworld.blogspot.com/2018/06/review-baroque-cycle-neal-stephenson.html"]
 
 - label: short-reviews-fiction-1
   title: "Short reviews: fiction (1)"
@@ -223,6 +262,7 @@
     - "Exhalation"
     - "Summerland"
     - "Cryptonomicon"
+  elsewhere: ["https://strataoftheworld.blogspot.com/2020/05/short-reviews-fiction.html"]
 
 - label: growth-and-civilisation
   title: "Growth and civilisation"
@@ -231,6 +271,7 @@
   math: false
   type: ["general"]
   tags: ["civilisation"]
+  elsewhere: ["https://strataoftheworld.blogspot.com/2019/09/growth-and-civilisation.html"]
 
 - label: ea-rigour-and-opportunity-in-charity
   title: "EA ideas 1: rigour and opportunity in charity"
@@ -240,6 +281,7 @@
   type: ["general"]
   tags: ["EA"]
   sequel: "ev-and-risk-neutrality"
+  elsewhere: ["https://strataoftheworld.blogspot.com/2020/07/ea-ideas-1-rigour-and-opportunity-in.html"]
 
 - label: ev-and-risk-neutrality
   title: "EA ideas 2: expected value and risk neutrality"
@@ -250,6 +292,7 @@
   tags: ["EA"]
   sequel: "ea-uncertainty"
   prequel: "ea-rigour-and-opportunity-in-charity"
+  elsewhere: ["https://strataoftheworld.blogspot.com/2020/07/ea-ideas-2-expected-value-and-risk.html"]
 
 - label: ea-uncertainty
   title: "EA ideas 3: uncertainty"
@@ -260,6 +303,7 @@
   tags: ["EA"]
   sequel: "utilitarianism"
   prequel: "ev-and-risk-neutrality"
+  elsewhere: ["https://strataoftheworld.blogspot.com/2020/07/ea-ideas-3-uncertainty.html"]
 
 - label: utilitarianism
   title: "EA ideas 4: utilitarianism"
@@ -269,6 +313,7 @@
   type: ["general"]
   tags: ["EA"]
   prequel: "ea-uncertainty"
+  elsewhere: ["https://strataoftheworld.blogspot.com/2020/08/ea-ideas-4-utilitarianism.html"]
 
 - label: technological-progress
   title: "Technological progress"
@@ -277,6 +322,7 @@
   math: false
   type: ["general"]
   tags: ["civilisation"]
+  elsewhere: ["https://strataoftheworld.blogspot.com/2021/03/technological-progress.html"]
 
 - label: nuclear-power
   title: "Nuclear power is good"
@@ -285,6 +331,7 @@
   math: false
   type: ["general"]
   tags: ["civilisation"]
+  elsewhere: ["https://strataoftheworld.blogspot.com/2021/03/nuclear-power-is-good.html"]
 
 - label: death-is-bad
   title: "Death is bad"
@@ -293,6 +340,7 @@
   math: false
   type: ["general"]
   tags: ["civilisation"]
+  elsewhere: ["https://strataoftheworld.blogspot.com/2021/10/death-is-bad.html"]
 
 - label: ea-in-practice
   title: "Effective Altruism in practice"
@@ -301,6 +349,7 @@
   math: false
   type: ["general"]
   tags: ["EA"]
+  elsewhere: ["https://www.strataoftheworld.com/2022/08/effective-altruism-in-practice.html"]
 
 - label: ea-schelling-point
   title: "EA as a Schelling point"
@@ -309,6 +358,7 @@
   math: false
   type: ["general"]
   tags: ["EA"]
+  elsewhere: ["https://forum.effectivealtruism.org/posts/g8aBf2oLwDvgd4ovf/much-ea-value-comes-from-being-a-schelling-point", "https://www.strataoftheworld.com/2022/09/ea-as-schelling-point.html"]
 
 - label: ai-risk-intro-1
   title: "AI risk intro 1: advanced AI might be very bad"
@@ -318,6 +368,8 @@
   type: ["general"]
   tags: ["AI"]
   coauthors: ["Callum McDougall"]
+  elsewhere: ["https://www.strataoftheworld.com/2022/09/ai-risk-intro-1-advanced-ai-might-be.html", "https://www.lesswrong.com/posts/bJgEMfiD48fEJJxjm/ai-risk-intro-1-advanced-ai-might-be-very-bad"]
+  sequel: "ai-risk-intro-2"
 
 - label: ai-risk-intro-2
   title: "AI risk intro 2: solving the problem"
@@ -327,6 +379,8 @@
   type: ["general"]
   tags: ["AI"]
   coauthors: ["Callum McDougall"]
+  elsewhere: ["https://www.strataoftheworld.com/2022/09/ai-risk-intro-2-solving-problem.html", "https://www.lesswrong.com/posts/e889bGfbtbo2qrMmW/ai-risk-intro-2-solving-the-problem"]
+  prequel: "ai-risk-intro-1"
 
 - label: research-skill-model
   title: "A model of research skill"
@@ -335,6 +389,7 @@
   math: false
   type: ["general"]
   tags: ["civilisation"]
+  elsewhere: ["https://www.lesswrong.com/posts/NyGgegFATfsyuGFo4/a-model-of-research-skill", "https://www.strataoftheworld.com/2024/01/a-model-of-research-skill.html", "https://forum.effectivealtruism.org/posts/KqTH5Yvxv3LbvcQz2/a-model-of-research-skill"]
 
 - label: positive-visions-for-ai
   title: "Positive visions for AI"
@@ -344,6 +399,7 @@
   type: ["general"]
   tags: ["AI"]
   coauthors: ["Florence Hinder"]
+  elsewhere: ["https://www.lesswrong.com/posts/4bBAK39rFypLbQND4/positive-visions-for-ai", "https://www.strataoftheworld.com/2024/07/positive-visions-for-ai.html", "https://forum.effectivealtruism.org/posts/NZTWEoF6iP8J7Wgiv/positive-visions-for-ai"]
 
 - label: human-data-for-alignment
   title: "Deciding not to found a human-data-for-alignment startup"
@@ -353,15 +409,17 @@
   type: ["project reports"]
   tags: ["AI"]
   coauthors: ["Matt Putz"]
+  elsewhere: ["https://www.strataoftheworld.com/2022/09/deciding-not-to-found-human-data-for.html", "https://www.lesswrong.com/posts/qArDMixsx77a9xL45/why-we-re-not-founding-a-human-data-for-alignment-org-1", "https://forum.effectivealtruism.org/posts/iBeWbfQLA9EKfsdhu/why-we-re-not-founding-a-human-data-for-alignment-org"]
 
 - label: ai-insurance
   title: "Investigating an insurance-for-AI startup"
   date: 2024-09-21
   description: "Flo Hinder and I worked together for a month during summer 2024 to figure out if we should found an insurance startup to mitigate AI risk. We chose not to, but we think someone else should."
-  math: false
+  math: true
   type: ["project reports"]
   tags: ["AI"]
   coauthors: ["Florence Hinder"]
+  elsewhere: ["https://www.lesswrong.com/posts/WFHg6ecDthErtuAJj/investigating-an-insurance-for-ai-startup", "https://www.strataoftheworld.com/2024/09/investigating-insurance-for-ai-startup.html", "https://forum.effectivealtruism.org/posts/sNCegtuZaHe9BNRdW/investigating-an-insurance-for-ai-startup"]
 
 - label: two-proofs
   title: "Two proofs"
@@ -370,6 +428,7 @@
   math: true
   type: ["technical"]
   tags: ["computing"]
+  elsewhere: ["https://strataoftheworld.blogspot.com/2019/06/two-proofs.html"]
 
 - label: classical-physics
   title: "Classical physics"
@@ -378,6 +437,7 @@
   math: true
   type: ["technical"]
   tags: ["physics"]
+  elsewhere: ["https://strataoftheworld.blogspot.com/2019/12/classical-physics.html"]
 
 - label: data-science-1
   title: "Data science 1"
@@ -386,6 +446,7 @@
   math: true
   type: ["technical"]
   tags: ["computing"]
+  elsewhere: ["https://strataoftheworld.blogspot.com/2020/12/data-science-1.html"]
 
 - label: data-science-2
   title: "Data science 2"
@@ -394,6 +455,7 @@
   math: true
   type: ["technical"]
   tags: ["computing"]
+  elsewhere: ["https://strataoftheworld.blogspot.com/2021/01/data-science-2.html"]
 
 - label: lambda-calculus
   title: "Lambda calculus"
@@ -402,6 +464,7 @@
   math: true
   type: ["technical"]
   tags: ["computing"]
+  elsewhere: ["https://strataoftheworld.blogspot.com/2021/04/lambda-calculus.html", "https://www.lesswrong.com/posts/D4PYwNtYNwsgoixGa/intro-to-hacking-with-the-lambda-calculus"]
 
 - label: disneyland-without-children
   title: "A Disneyland Without Children"
@@ -409,7 +472,9 @@
   description: "A short story."
   math: false
   type: ["fiction"]
+
   tags: ["civilisation"]
+  elsewhere: ["https://www.lesswrong.com/posts/pk9mofif2jWbc6Tv3/fiction-a-disneyland-without-children", "https://www.strataoftheworld.com/2023/06/a-disneyland-without-children.html", "https://forum.effectivealtruism.org/posts/Ben4xi9W2k9jvnMky/fiction-a-disneyland-without-children"]
 
 - label: powerful-proof-techniques
   title: "Powerful proof techniques"
@@ -418,6 +483,7 @@
   math: true
   type: ["humour"]
   tags: ["maths"]
+  elsewhere: ["https://strataoftheworld.blogspot.com/2018/09/powerful-proof-techniques.html"]
 
 - label: ultimate-literary-essay
   title: "The Ultimate Literary Essay"
@@ -426,3 +492,4 @@
   math: false
   type: ["humour"]
   tags: ["satire"]
+  elsewhere: ["https://strataoftheworld.blogspot.com/2019/06/the-ultimate-literary-essay.html"]

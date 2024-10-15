@@ -36,6 +36,7 @@
             <p>Co-authors: {{ post.meta.coauthors | join(', ') }}</p>
             {% endif %}
             <p><time datetime="{{ post.meta.date }}">{{ post.meta.date }}</time></p>
+            <p class="post-summary"> <strong>Summary</strong>: {{ post.meta.description }}</p>
         </div>
         
         {% if toc %}
@@ -53,7 +54,28 @@
                 </nav>
             </div>
         {% endif %}
+
+        <hr>
         
         {{ post_content | safe }}
+
+        <hr>
+        <div class="footer">
+            {% if post.meta.sequel %}
+                <p>Next: <a href="../{{ post.meta.sequel }}/">{{ get_post_title(post.meta.sequel) }}</a></p>
+            {% endif %}
+            {% if post.meta.prequel %}
+                <p>Previous: <a href="../{{ post.meta.prequel }}/">{{ get_post_title(post.meta.prequel) }}</a></p>
+            {% endif %}
+            {% if post.meta.elsewhere %}
+                <p>There may be comments on this post on the version published on:</p>
+                <ul>
+                {% for link in post.meta.elsewhere %}
+                    <li><a href="{{ link }}">{{ get_domain(link) }}</a></li>
+                {% endfor %}
+                </ul>
+                </p>
+            {% endif %}
+        </div>
     </article>
 {% endblock %}
