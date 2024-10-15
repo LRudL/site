@@ -148,6 +148,7 @@ def generate_post_page(env: Environment, post: Post, context: dict, out_dir: str
     os.makedirs(post_dir, exist_ok=True)
     write_to_file(os.path.join(post_dir, "index.html"), post_html)
 
+
 def prepare_common_context():
     return {
         "pages": [{"url": "index.html", "title": "Home"}],
@@ -236,19 +237,6 @@ def render_main_content_with_toc(template: Template, post_groupings: PostGroupin
         **context
     )
 
-def generate_post_pages(env: Environment, md: markdown.Markdown, latex_ext: LatexExtension, posts: list[Post], context: dict, out_dir: str):
-    post_template = env.get_template("post.html")
-    for post in posts:
-        post_content = prepare_post_content(post, md)
-        toc, post_content_html = generate_toc(post_content)
-        
-        post_html = render_post_content(post_template, post, post_content_html, toc, context, posts)
-        
-        post_html = post_process_latex(post_html)
-        
-        post_dir = os.path.join(out_dir, post.meta.label)
-        os.makedirs(post_dir, exist_ok=True)
-        write_to_file(os.path.join(post_dir, "index.html"), post_html)
 
 def prepare_post_content(post: Post, md: markdown.Markdown):
     post.content = remove_first_h1(post.content)
