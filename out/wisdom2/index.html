@@ -121,7 +121,7 @@
 <p>However, some knowledge becomes less relevant with time. We'll incorporate this by changing our model to $A(T) = \int_0^T I(t) f_T(t) \mathrm{d}t$, where $f_T(t)$ is a number between 0 and 1 measuring what fraction of the results $I(t)$ generated at time $t$ are still relevant at current time $T$. For example, here are some settings:</p>
 <ul>
 <li>no decay: $f_T(t) = 1$ (to recover the case where results of direct optimisation never become irrelevant)</li>
-<li>time-bounded: $f_T(t) = \mathbb{1}_{T - t &lt; B}$ (that nothing from more than $B$ time ago is still relevant)</li>
+<li>time-bounded: $f_T(t) = \mathbb{1}_{T - t < B}$ (that nothing from more than $B$ time ago is still relevant)</li>
 <li>exponential decay: $f_T(t) = e^{-D(T - t)}$ (exponentially-declining relevance with some constant $D$).</li>
 </ul>
 <p>(In addition to someone somewhere doing direct optimisation, the random course of events can add to the stockpile of knowledge and results. This includes data about natural phenomenon, chance discoveries, and chance controlled trials. However, such things are likely either constant, or then increasing in proportion with more direct efforts - since the more attempted optimisation is going on in the world, the more interesting chance data there is to observe - so this should not change the fundamental dynamics, and we'll ignore this.)</p>
@@ -132,18 +132,18 @@
 <p>A similar effect is seen with many other settings, including switching from exponential growth to even faster exponential growth. Given constant, polynomial, or exponential growth modes, and any of the three different relevance decay settings above, almost all combinations result in $r$ settling to a constant:</p>
 <p><strong>The order of $T$-terms in the ratio $r = A(T) / I(T)$ in the limit for different growth modes and decay modes:</strong>
 $$
-\array{&amp; \text{no decay} &amp; \text{time-bounded} &amp; \text{exponential decay} \\
-\text{no growth} &amp; \mathcal{O}(T) &amp; \mathcal{O}(1) &amp; \mathcal{O}(1) \\
-\text{polynomial growth} &amp; \mathcal{O}(T) &amp; \mathcal{O}(1) &amp; \mathcal{O}(T^n) \\
-\text{exponential growth} &amp; \mathcal{O}(1) &amp; \mathcal{O}(1) &amp; \mathcal{O}(1) \\
+\array{& \text{no decay} & \text{time-bounded} & \text{exponential decay} \\
+\text{no growth} & \mathcal{O}(T) & \mathcal{O}(1) & \mathcal{O}(1) \\
+\text{polynomial growth} & \mathcal{O}(T) & \mathcal{O}(1) & \mathcal{O}(T^n) \\
+\text{exponential growth} & \mathcal{O}(1) & \mathcal{O}(1) & \mathcal{O}(1) \\
 }
 $$</p>
 <p><strong>In more detail: the dominant term (and the order of any convergence speed term) in the $T \to \infty$ limit of $r = A(T)/I(T)$</strong>:
 $$
-\array{&amp; \text{decay 1} &amp; \text{decay } \mathbb{1}_{T-t&lt;B} &amp; \text{decay } e^{-D(T-t)} \\
-\text{growth } C &amp; T &amp; B &amp; \frac{1}{D} - \mathcal{O} \left(e^{-DT}\right) \\
-\text{growth } t^n &amp; \frac{T}{n+1} &amp; \frac{B}{n+1} - \mathcal{O}\left(\frac{1}{T}\right) &amp; \frac{T^n}{D} \\
-\text{growth } e^{\lambda t} &amp; \frac{1}{\lambda}  - \mathcal{O} \left(e^{-\lambda T} \right)&amp; \frac{1}{\lambda} &amp; \frac{1}{\lambda + D} - \mathcal{O} \left( e^{-(D+\lambda)T} \right) \\
+\array{& \text{decay 1} & \text{decay } \mathbb{1}_{T-t<B} & \text{decay } e^{-D(T-t)} \\
+\text{growth } C & T & B & \frac{1}{D} - \mathcal{O} \left(e^{-DT}\right) \\
+\text{growth } t^n & \frac{T}{n+1} & \frac{B}{n+1} - \mathcal{O}\left(\frac{1}{T}\right) & \frac{T^n}{D} \\
+\text{growth } e^{\lambda t} & \frac{1}{\lambda}  - \mathcal{O} \left(e^{-\lambda T} \right)& \frac{1}{\lambda} & \frac{1}{\lambda + D} - \mathcal{O} \left( e^{-(D+\lambda)T} \right) \\
 }
 $$</p>
 <p>The only exceptions to the ratio settling to a constant are that we get polynomial growth in the ratio with a polynomial growth mode and exponential relevance decay, and linear growth in the ratio when there is no relevance decay in accumulated amortised results, and either a constant or polynomial growth mode.</p>

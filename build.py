@@ -13,6 +13,9 @@ from bs4 import BeautifulSoup
 from itertools import groupby
 from operator import attrgetter
 from urllib.parse import urlparse
+import uuid
+
+from latex_wrangle import LatexExtension
 
 @dataclass
 class PostMeta:
@@ -65,20 +68,6 @@ def load_posts(path: str = "src") -> list[Post]:
 
     return posts
 
-def post_process_latex(html_content):
-    """
-    The point of this is that "\\" is converted to "\" at some stage, so convert them back to make linebreaks in equations work.
-    """
-    def replace_backslashes(match):
-        latex = match.group(1)
-        # Replace a single backslash at the end of a line with two backslashes
-        processed_latex = re.sub(r'\\(\s*\n)', r'\\\\\1', latex)
-        return f'$${processed_latex}$$'
-
-    # Process $$-demarcated LaTeX expressions
-    result = re.sub(r'\$\$(.*?)\$\$', replace_backslashes, html_content, flags=re.DOTALL)
-    return result
-
 def collect_images(content):
     """Extract image references from markdown content."""
     image_pattern = r'!\[.*?\]\((.*?)\)'
@@ -127,14 +116,37 @@ def remove_first_h1(markdown_content):
 
 def generate_html(posts: list[Post], templates_dir: str = "templates", out_dir: str = "out"):
     jinja_env = Environment(loader=FileSystemLoader(templates_dir))
-    md = markdown.Markdown(extensions=['fenced_code', 'tables'])
     
     process_images(posts, out_dir)
     context = prepare_common_context()
     sorted_posts = create_post_groupings(posts)
     
     generate_main_page(jinja_env, sorted_posts, context, out_dir)
-    generate_post_pages(jinja_env, md, posts, context, out_dir)
+    
+    for post in posts:
+        generate_post_page(jinja_env, post, context, out_dir, posts)
+
+def generate_post_page(env: Environment, post: Post, context: dict, out_dir: str, posts: list[Post]):
+    post_template = env.get_template("post.html")
+    
+    extensions: list[str | LatexExtension] = ['fenced_code', 'tables']
+    if post.meta.math:
+        latex_ext = LatexExtension()
+        extensions.append(latex_ext)
+    
+    md = markdown.Markdown(extensions=extensions)
+    
+    post_content = prepare_post_content(post, md)
+    toc, post_content_html = generate_toc(post_content)
+    
+    post_html = render_post_content(post_template, post, post_content_html, toc, context, posts)
+    
+    if post.meta.math:
+        post_html = latex_ext.restore_latex(post_html)
+    
+    post_dir = os.path.join(out_dir, post.meta.label)
+    os.makedirs(post_dir, exist_ok=True)
+    write_to_file(os.path.join(post_dir, "index.html"), post_html)
 
 def prepare_common_context():
     return {
@@ -224,13 +236,15 @@ def render_main_content_with_toc(template: Template, post_groupings: PostGroupin
         **context
     )
 
-def generate_post_pages(env: Environment, md: markdown.Markdown, posts: list[Post], context: dict, out_dir: str):
+def generate_post_pages(env: Environment, md: markdown.Markdown, latex_ext: LatexExtension, posts: list[Post], context: dict, out_dir: str):
     post_template = env.get_template("post.html")
     for post in posts:
         post_content = prepare_post_content(post, md)
         toc, post_content_html = generate_toc(post_content)
         
         post_html = render_post_content(post_template, post, post_content_html, toc, context, posts)
+        
+        post_html = post_process_latex(post_html)
         
         post_dir = os.path.join(out_dir, post.meta.label)
         os.makedirs(post_dir, exist_ok=True)
@@ -239,7 +253,7 @@ def generate_post_pages(env: Environment, md: markdown.Markdown, posts: list[Pos
 def prepare_post_content(post: Post, md: markdown.Markdown):
     post.content = remove_first_h1(post.content)
     post_content_html = md.convert(post.content)
-    return post_process_latex(post_content_html)
+    return post_content_html
 
 def render_post_content(template: Template, post: Post, post_content_html: str, toc: list[dict[str, str]], context: dict, posts: list[Post]):
     # don't include old blog in "elsewhere" category
@@ -281,6 +295,7 @@ def get_post_title(label: str, posts: list[Post]) -> str:
 
 def get_domain(url: str) -> str:
     return urlparse(url).netloc
+
 
 if __name__ == "__main__":
     main()
