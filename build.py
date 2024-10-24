@@ -31,6 +31,7 @@ class PostMeta:
     prequel: str | None = None # label of the post that is the prequel to this one
     sequel: str | None = None # label of the post that is the sequel to this one
     elsewhere: list[str] | None = None # a list of links to other places where this post has been published
+    word_count: int | None = None  # Word count of the post content
 
 @dataclass
 class Post:
@@ -241,6 +242,11 @@ def render_main_content_with_toc(template: Template, post_groupings: PostGroupin
 def prepare_post_content(post: Post, md: markdown.Markdown):
     post.content = remove_first_h1(post.content)
     post_content_html = md.convert(post.content)
+    
+    # Calculate word count
+    word_count = len(post.content.split())
+    post.meta.word_count = word_count  # Add word count to post metadata
+    
     return post_content_html
 
 def render_post_content(template: Template, post: Post, post_content_html: str, toc: list[dict[str, str]], context: dict, posts: list[Post]):

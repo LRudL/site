@@ -35,7 +35,10 @@
             {% if post.meta.coauthors %}
             <p>Co-authors: {{ post.meta.coauthors | join(', ') }}</p>
             {% endif %}
-            <p><time datetime="{{ post.meta.date }}">{{ post.meta.date }}</time></p>
+            <p>
+                <time datetime="{{ post.meta.date }}">{{ post.meta.date }}</time>
+                &middot; {{ (post.meta.word_count / 1000) | round(1) }}k words (reading time: {{ (post.meta.word_count / 275) | round | int }}min)
+            </p>
             <p class="post-summary"> <strong>Summary</strong>: {{ post.meta.description }}</p>
         </div>
         
