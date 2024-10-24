@@ -106,7 +106,7 @@
 - label: godel-escher-bach
   title: "Review: Gödel, Escher, Bach"
   date: 2018-04-22
-  description: "An extremely clever exploration of ideas about math and cognition."
+  description: "Review of a book that is a clever exploration of ideas about math and cognition."
   math: true
   type: ["book reviews", "nonfiction"]
   tags: ["computing"]
@@ -162,7 +162,7 @@
   title: "Review: From NAND To Tetris"
   date: 2019-08-15
   description: "A fast-paced, concise, yet comprehensive journey from logic gates and DFFs all the way to the implementation of operating systems and high-level programming languages."
-  math: false
+  math: true
   type: ["book reviews", "nonfiction"]
   tags: ["computing"]
   elsewhere: ["https://strataoftheworld.blogspot.com/2019/08/review-from-nand-to-tetris.html"]
@@ -189,7 +189,7 @@
   title: "Review: Energy and Civilization: A History"
   date: 2018-10-28
   description: "An information-dense book about historical energy use that lives up to its ambitious title."
-  math: false
+  math: true
   type: ["book reviews", "nonfiction"]
   tags: ["history", "civilisation"]
   sequel: energy-and-civilization-more
@@ -388,7 +388,7 @@
   description: "Doing research means answering questions no one yet knows the answer to. This post tries to find and describe the core parts of being good at this"
   math: false
   type: ["general"]
-  tags: ["civilisation"]
+  tags: ["skills"]
   elsewhere: ["https://www.lesswrong.com/posts/NyGgegFATfsyuGFo4/a-model-of-research-skill", "https://www.strataoftheworld.com/2024/01/a-model-of-research-skill.html", "https://forum.effectivealtruism.org/posts/KqTH5Yvxv3LbvcQz2/a-model-of-research-skill"]
 
 - label: positive-visions-for-ai
@@ -424,7 +424,7 @@
 - label: two-proofs
   title: "Two proofs"
   date: 2019-06-29
-  description: "Two accessible, visual, and (dare I say it?) fun proofs of simple mathematical results."
+  description: "Two accessible, visual, and (dare I say it?) fun proofs of simple mathematical results, carefully explained so they can be followed without a background in maths."
   math: true
   type: ["technical"]
   tags: ["computing"]
@@ -447,6 +447,7 @@
   type: ["technical"]
   tags: ["computing"]
   elsewhere: ["https://strataoftheworld.blogspot.com/2020/12/data-science-1.html"]
+  sequel: "data-science-2"
 
 - label: data-science-2
   title: "Data science 2"
@@ -456,6 +457,7 @@
   type: ["technical"]
   tags: ["computing"]
   elsewhere: ["https://strataoftheworld.blogspot.com/2021/01/data-science-2.html"]
+  prequel: "data-science-1"
 
 - label: lambda-calculus
   title: "Lambda calculus"

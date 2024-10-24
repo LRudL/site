@@ -317,4 +317,6 @@ blockquote {
     color: #333;
 }
 
-
+code {
+    font-size: 0.9em;
+}

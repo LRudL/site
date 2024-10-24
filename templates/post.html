@@ -68,7 +68,7 @@
                 <p>Previous: <a href="../{{ post.meta.prequel }}/">{{ get_post_title(post.meta.prequel) }}</a></p>
             {% endif %}
             {% if post.meta.elsewhere %}
-                <p>There may be comments on this post on the version published on:</p>
+                <p>There may be comments on the version of this post that was published on:</p>
                 <ul>
                 {% for link in post.meta.elsewhere %}
                     <li><a href="{{ link }}">{{ get_domain(link) }}</a></li>
