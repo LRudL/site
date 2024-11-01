@@ -1,5 +1,6 @@
 :root {
-    --sidebar-min-width: 300px;
+    --container-max-width: 2000px;
+    --sidebar-width: 400px;
     --main-content-max-width: 75ch;
     --background-color: #fdfdfd;
     --theme-color: #39c;
@@ -14,6 +15,7 @@
 }
 
 body, html {
+    position: relative;
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -23,11 +25,6 @@ body, html {
     line-height: 1.7rem;
     color: var(--text-color);
     background-color: var(--background-color);
-}
-
-body {
-    display: flex;
-    flex-direction: column;
 }
 
 p {
@@ -42,9 +39,13 @@ header {
 
 .container {
     display: flex;
-    max-width: 100%;
-    width: 100%;
+    flex-direction: row;
+    max-width: var(--container-max-width);
     justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    padding-right: var(--sidebar-width);
 }
 
 .column {
@@ -53,30 +54,24 @@ header {
 }
 
 .left {
-    flex: 0 0 var(--sidebar-min-width);
-    background-color: var(--bg-color);
-    min-width: var(--sidebar-min-width);
+    background-color: var(--background-color);
+    width: var(--sidebar-width);
 }
 
 .right {
   width: 0px;
 }
 
-.main {
-    background-color: var(--bg-color);
-    min-width: 0;
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
+.content {
+    width: 100%;
 }
 
 .sticky-div {
     position: sticky;
-    top: 20px;
+    top: 40px;
     padding: 20px;
     max-height: calc(100vh - 40px);
     overflow-y: auto;
-    scrollbar-width:thin;
 }
 
 /* Webkit browsers like Chrome, Safari */
@@ -93,17 +88,19 @@ header {
 }
 
 
-.main .content {
+.main {
     max-width: var(--main-content-max-width);
-    width: 100%;
     padding-left: var(--gap-lg);
     padding-right: var(--gap-lg);
     box-sizing: border-box;
-    margin: 0 auto;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Add this new rule */
-.main .content img {
+img {
     max-width: 100%;
     height: auto;
     display: block;
@@ -112,13 +109,15 @@ header {
 
 .collapsed-sidebar {
     display: none;
-    background-color: var(--bg-color);
+    background-color: var(--background-color);
     padding: 10px 20px;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1560px) {
     .container {
         flex-direction: column;
+        transform: none;
+        padding-right: 0;
     }
     .left, .right {
         display: none;
@@ -126,14 +125,11 @@ header {
     .collapsed-sidebar {
         display: block;
     }
-    .main .content {
+    .main {
         padding-left: var(--gap-md);
         padding-right: var(--gap-md);
         max-width: min(100%, var(--main-content-max-width));
         margin: 0 auto; 
-    }
-    .main {
-        max-width: 100%;
     }
     .post-content {
         border-top: 0px !important;
@@ -141,6 +137,8 @@ header {
 }
 
 header nav {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -166,13 +164,6 @@ a:hover {
 /* Hover effect (optional) */
 header nav ul li a:hover {
     text-decoration: underline;
-}
-
-.container {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 hr.toc-separator {
