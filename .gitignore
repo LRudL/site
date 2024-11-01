@@ -3,3 +3,5 @@ src/.obsidian
 */.vscode/*
 .vscode
 __pycache__
+venv
+.DS_Store

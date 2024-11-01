@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The lambda calculus is a simple model of computation (like Turing machines). This post introduces it, shows how to do useful things in it, and works up to a lambda calculus interpreter written in lambda calculus.">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
     <title>Lambda calculus - Rudolf's Writing</title>
     
     <script>
@@ -128,7 +129,6 @@
     
 
             </div>
-            <div class="content"></div>
         </div>
         <div class="column main">
             <div class="collapsed-sidebar">
@@ -239,8 +239,7 @@
             </div>
         
 
-        <hr>
-        
+        <div class="post-content">
         <p>This post is about lambda calculus. The goal is not to do maths with it, but rather to build up definitions within it until we can express non-trivial algorithms easily. At the end we will see a lambda calculus interpreter written in the lambda calculus, and realise that we're most of the way to Lisp.</p>
 <p>But first, why care about lambda calculus? Consider four different systems:</p>
 <ul>
@@ -642,8 +641,7 @@
 <p>This is most of <a href="http://languagelog.ldc.upenn.edu/myl/ldc/llog/jmc.pdf">what you need in a Lisp</a>. Lisp was invented in 1958 by John McCarthy. It was intended as an alternative axiomatisation for computation, with the goal of not being too complicated to define while still being human friendly, unlike the lambda calculus or Turing machines. It borrows notation (in particular the keyword <code>lambda</code>) from the lambda calculus and its terms are also trees, but it is not directly based on the lambda calculus.</p>
 <p>Lisp was not intended as a programming language, but Steve Russell (no relation to Bertrand Russell ... I'm pretty sure) realised you could write machine code to evaluate Lisp expressions, and went ahead and did so, making Lisp the second-oldest programming language. Despite its age, Lisp is arguably the most elegant and flexible programming language (modern dialects include <a href="https://clojure.org/">Clojure</a> and <a href="https://racket-lang.org/">Racket</a>).</p>
 <p>One way to think of what we've done in this post is that we've started from the lambda calculus – an almost stupidly simple theoretical model – and made definitions and syntax transformations until we got most of the way to being able to emulate Lisp, a very usable and practical programming language. The main takeaway is, hopefully, an intuitive sense of how something as simple as the lambda calculus can express any computation expressible in a higher-level language.</p>
-
-        <hr>
+        </div>
         <div class="footer">
             
             
@@ -665,10 +663,8 @@
             <div class="sticky-div">
                 
             </div>
-            <div class="content"></div>
         </div>-->
     </div>
-    <hr>
     <footer></footer>
 </body>
 </html>
