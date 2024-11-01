@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The input distribution of a supervised machine learning system is modeled as an unchanging thing, and even in reinforcement learning there are types of distributional shift we want to avoid. However, ML systems are part of the world, and often have incentives for changing the distribution of data they act on (for example, changing the set of users or the preferences of those users in an online content recommendation system such that the users become easier to satisfy). A paper by Krueger, Maharaj, and Leike explores such concerns, and especially whether ML systems end up acting on incentives for distributional shift. They invent simple scenarios and see what training setups lead to agents non-myopically act to shift the future distribution, and find that introducing meta-learning alone is enough to cause this, and that sometimes the choice of learning algorithm (e.g. policy gradient vs Q-learning) has perhaps surprising effects on whether or not such incentives are taken. The paper proposes shuffling agents between environments as a solution, but this has its flaws. The topic relates to some concerns with embedded agents and especially myopia.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <title>Understanding and controlling auto-induced distributional shift - Rudolf's Writing</title>
     
     <script>
@@ -135,10 +136,9 @@
             </div>
         
 
-        <hr>
-        
+        <div class="post-content">
         <p><em>This is a summary of <a href="https://arxiv.org/pdf/2009.09153.pdf">a paper</a> by David Krueger, Tegan Maharaj, and Jan Leike.</em></p>
-<p>_This post was written under Evan Hubinger’s direct guidance and mentorship, as a part of the <a href="https://www.lesswrong.com/posts/FpokmCnbP3CEZ5h4t/ml-alignment-theory-program-under-evan-hubinger"><em>Stanford Existential Risks Initiative ML Alignment Theory Scholars (MATS) program</em></a>.</p>
+<p>This post was written under Evan Hubinger’s direct guidance and mentorship, as a part of the <a href="https://www.lesswrong.com/posts/FpokmCnbP3CEZ5h4t/ml-alignment-theory-program-under-evan-hubinger"><em>Stanford Existential Risks Initiative ML Alignment Theory Scholars (MATS) program</em></a>.</p>
 <p><strong>TL;DR</strong>: The input distribution of a supervised machine learning system is modeled as an unchanging thing, and even in reinforcement learning there are types of distributional shift we want to avoid. However, ML systems are part of the world, and often have incentives for changing the distribution of data they act on (for example, changing the set of users or the preferences of those users in an online content recommendation system such that the users become easier to satisfy). <a href="https://arxiv.org/pdf/2009.09153.pdf">A paper by Krueger, Maharaj, and Leike</a> explores such concerns, and especially whether ML systems end up acting on incentives for distributional shift. They invent simple scenarios and see what training setups lead to agents non-myopically act to shift the future distribution, and find that introducing meta-learning alone is enough to cause this, and that sometimes the choice of learning algorithm (e.g. policy gradient vs Q-learning) has perhaps surprising effects on whether or not such incentives are taken. The paper proposes shuffling agents between environments as a solution, but this has its flaws. The topic relates to some concerns with embedded agents and especially myopia.</p>
 <h2 id="section-0"><strong>Introduction</strong></h2>
 <p>A machine learning system receives inputs and produces outputs. When we train it, we want the system to become good at producing the right output given the right input.</p>
@@ -262,8 +262,7 @@ $$</p>
 <li>Finally, we can't swap out the real world, or perfectly isolate subsets of the real world, so this strategy does not have nearly as much relevance for agents that learn by acting in the real world.</li>
 </ul>
 <p>A better and more general approach might look something like <a href="https://arxiv.org/pdf/2011.08827.pdf">Avoiding Tampering Incentives in Deep RL via Decoupled Approval</a> by Uesato &amp; Kumar et. al. It is a twist on approval-based algorithms that seek feedback before taking action. The idea is that you can get versions of standard RL algorithms (e.g. Q-learning and policy gradient) that select two actions rather than one: the first as the action it takes, and the second as an action to ask for feedback about (feedback can be either automatic or involve a human, but note that the human is not blocking the loop of taking the action). This avoids the agent blocking on human feedback (which can be a problem with more direct approval-based learning setups) while (under some assumptions) provably resulting in the agent trying to maximise a version of the reward that is uncorrupted by changes the agent effects on its reward signal. Also note that we should be able to extend these ideas to supervised learning systems, like the online content recommendation system that Krueger et. al. uses as an example. The standard problems with giving high-quality feedback to a potentially very powerful optimising agent in subtle circumstances (e.g. whether or not a certain recommendation act pushes the user base in a direction we don't want) apply. However, since it does not depend on swapping agents in and out of environments, it avoids the problems with context-swapping.</p>
-
-        <hr>
+        </div>
         <div class="footer">
             
             

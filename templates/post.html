@@ -58,11 +58,9 @@
             </div>
         {% endif %}
 
-        <hr>
-        
+        <div class="post-content">
         {{ post_content | safe }}
-
-        <hr>
+        </div>
         <div class="footer">
             {% if post.meta.sequel %}
                 <p>Next: <a href="../{{ post.meta.sequel }}/">{{ get_post_title(post.meta.sequel) }}</a></p>

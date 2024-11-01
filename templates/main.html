@@ -12,7 +12,7 @@
 
 {% block left_column %}
     {% if toc %}
-        <p class="heading-font"><strong>On this page:</strong></p>
+        <p class="toc-heading">On this page:</p>
         <nav id="toc" class="table-of-contents">
             <hr class="toc-separator">
             <ul>
@@ -32,7 +32,7 @@
 
     {% if toc %}
         <div class="collapsed-sidebar">
-            <p class="heading-font"><strong>On this page:</strong></p>
+            <p class="toc-heading">On this page:</p>
             <nav id="collapsed-toc" class="table-of-contents">
                 <hr class="toc-separator">
                 <ul>
@@ -66,7 +66,7 @@
 
         <div class="tab-content" id="chronological">
             {% for year_group in posts_by_year %}
-                <p><strong>{{ year_group.year }} </strong></p>
+                <p class="link-heading">{{ year_group.year }}</p>
                 <ul>
                 {% for post in year_group.posts %}
                     <li><a href="{{ post.meta.label }}">{{ post.meta.title }}</a></li>
@@ -77,7 +77,7 @@
 
         <div class="tab-content" id="type">
             {% for post_group in posts_by_type %}
-                <p><strong>{{ post_group.type }}</strong></p>
+                <p class="link-heading">{{ post_group.type }}</p>
                 <ul>
                     {% for post in post_group.posts %}
                         <li><a href="{{ post.meta.label }}">{{ post.meta.title }}</a></li>
@@ -88,7 +88,7 @@
 
         <div class="tab-content" id="topic">
             {% for tag_group in posts_by_tag %}
-                <p><strong>{{ tag_group.tag }}</strong></p>
+                <p class="link-heading">{{ tag_group.tag }}</p>
                 <ul>
                     {% for post in tag_group.posts %}
                         <li><a href="{{ post.meta.label }}">{{ post.meta.title }}</a></li>

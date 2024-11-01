@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Notes on fundamental data science concepts (notation; some probability laws; maximum likelihood estimation; supervised and unsupervised learning; fitting, interpreting, and visualising linear models; empirical distributions; KL divergence).">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <title>Data science 1 - Rudolf's Writing</title>
     
     <script>
@@ -223,8 +224,7 @@
             </div>
         
 
-        <hr>
-        
+        <div class="post-content">
         <p>This is an overview of fundamental ideas in data science, mostly based on <a href="https://www.cl.cam.ac.uk/teaching/2021/DataSci/materials.html">Damon Wischik's excellent data science course at Cambridge</a> (if using these notes for revision for that course, be aware that I don't cover all examinable things and cover some things that aren't examinable; the criteria for inclusion is interestingness, not examinability).</p>
 <p>The basic question is this: we're given data; what can we say about the world based on it?</p>
 <p>These notes are split into two parts due to length. In part 1:</p>
@@ -692,8 +692,7 @@ $$
 (In the last step, I've just expanded out our earlier definitions of $p_i$ and $q_i$.)</p>
 <p>This is called the Kullback-Leibler divergence (KL divergence). If $X=X^*$, then it comes out to 0; for worse fits, the value becomes greater.</p>
 <p>There's a nice information theoretic interpretation of this result. $- \sum_{i} q_i \log_2(p_i)$ is the average number of bits needed to most efficiently represent a value randomly drawn from the dataset, using a coding scheme optimised for the distribution $X$. $-\sum_{i} q_i \log_2(q_i)$ is the same, but using the optimal coding scheme: the one designed for the empirical distribution. The difference we have in the first line is the first minus the second; i.e. the number of wasted bits that we could shave off a message describing an item in the dataset if we used the theoretically optimal encoding.</p>
-
-        <hr>
+        </div>
         <div class="footer">
             
                 <p>Next: <a href="../data-science-2/">Data science 2</a></p>
