@@ -141,9 +141,6 @@ header {
     .post-content {
         border-top: 0px !important;
     }
-    .table-of-contents li {
-        line-height: 1 !important;
-    }
 }
 
 header nav {
@@ -202,11 +199,11 @@ hr.toc-separator {
     padding: var(--gap-md) 0;
     display: flex;
     flex-direction: column;
-    gap: var(--gap-md);
+    gap: var(--gap-sm);
 }
 
 .table-of-contents li {
-    line-height: 1.2;
+    line-height: 1.3;
     margin-bottom: 0;
 }
 

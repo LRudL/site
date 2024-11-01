@@ -344,20 +344,10 @@ def copy_css(templates_dir: str = "templates", out_dir: str = "out"):
         f.write(css)
 
 
-def copy_global_images(images_dir: str = "img", out_dir: str = "out"):
-    # copy first level of images directory (e.g. for favicon)
-    path: str = os.path.join("src", images_dir)
-    print(os.listdir(path))
-    images = [f for f in os.listdir(path) if os.path.isfile(os.path.join(path, f))]
-    for img in images:
-        shutil.copy2(f"{path}/{img}", f"{out_dir}/{img}")
-
-
 def main():
     posts = load_posts()
     generate_html(posts)
     copy_css()
-    copy_global_images()
 
 
 def get_post_title(label: str, posts: list[Post]) -> str:
