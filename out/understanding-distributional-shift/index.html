@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The input distribution of a supervised machine learning system is modeled as an unchanging thing, and even in reinforcement learning there are types of distributional shift we want to avoid. However, ML systems are part of the world, and often have incentives for changing the distribution of data they act on (for example, changing the set of users or the preferences of those users in an online content recommendation system such that the users become easier to satisfy). A paper by Krueger, Maharaj, and Leike explores such concerns, and especially whether ML systems end up acting on incentives for distributional shift. They invent simple scenarios and see what training setups lead to agents non-myopically act to shift the future distribution, and find that introducing meta-learning alone is enough to cause this, and that sometimes the choice of learning algorithm (e.g. policy gradient vs Q-learning) has perhaps surprising effects on whether or not such incentives are taken. The paper proposes shuffling agents between environments as a solution, but this has its flaws. The topic relates to some concerns with embedded agents and especially myopia.">
-    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
     <title>Understanding and controlling auto-induced distributional shift - Rudolf's Writing</title>
     
     <script>

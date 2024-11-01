@@ -3,9 +3,10 @@
     --sidebar-width: 350px;
     --main-content-max-width: 75ch;
     --background-color: #fdfdfd;
-    --theme-color: #39c;
-    --theme-color-dark: #36c;
+    --theme-color: #37c;
+    --theme-color-dark: #33c;
     --theme-color-light: rgb(241, 246, 255);
+    --theme-color-highlights: #333;
     --text-color: #000;
     --serif-font: Georgia, serif;
     --sans-serif-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -168,7 +169,7 @@ header nav ul li a:hover {
 }
 
 hr.toc-separator {
-    border-top: 1px solid var(--theme-color);
+    border-top: 1px solid var(--theme-color-highlights);
     margin: 0;
 }
 
@@ -207,7 +208,7 @@ hr.toc-separator {
 
 .table-of-contents a {
     text-decoration: none;
-    color: var(--theme-color);
+    color: var(--theme-color-highlights);
 }
 
 .table-of-contents a:hover {
@@ -257,8 +258,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .post-content {
     padding: var(--gap-lg) 0;
-    border-top: 1px solid var(--theme-color);
-    border-bottom: 1px solid var(--theme-color);
+    border-top: 1px solid var(--theme-color-highlights);
+    border-bottom: 1px solid var(--theme-color-highlights);
 }
 
 
@@ -298,8 +299,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .tab-button:hover {
     background-color: var(--theme-color-light);
-    border-color: var(--theme-color);
-    color: var(--theme-color);
+    border-color: var(--theme-color-highlights);
+    color: var(--theme-color-highlights);
 }
 
 .tab-content {
@@ -317,8 +318,8 @@ h1, h2, h3, h4, h5, h6 {
 #tab1:checked ~ .tab-buttons label[for="tab1"],
 #tab2:checked ~ .tab-buttons label[for="tab2"],
 #tab3:checked ~ .tab-buttons label[for="tab3"] {
-    border: 2px solid var(--theme-color);
-    color: var(--theme-color);
+    border: 2px solid var(--theme-color-highlights);
+    color: var(--theme-color-highlights);
     font-weight: bold;
 }
 
