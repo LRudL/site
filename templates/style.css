@@ -1,6 +1,6 @@
 :root {
     --container-max-width: 2000px;
-    --sidebar-width: 400px;
+    --sidebar-width: 350px;
     --main-content-max-width: 75ch;
     --background-color: #fdfdfd;
     --theme-color: #39c;
@@ -64,6 +64,7 @@ header {
 
 .content {
     width: 100%;
+    padding-bottom: var(--gap-lg);
 }
 
 .sticky-div {
@@ -113,7 +114,7 @@ img {
     padding: 10px 20px;
 }
 
-@media (max-width: 1560px) {
+@media (max-width: 1450px) {
     .container {
         flex-direction: column;
         transform: none;
