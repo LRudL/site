@@ -1,6 +1,6 @@
 :root {
-    --sidebar-min-width: 350px;
-    --main-content-max-width: 66ch;
+    --sidebar-min-width: 300px;
+    --main-content-max-width: 75ch;
     --background-color: #fdfdfd;
     --theme-color: #39c;
     --theme-color-dark: #36c;
@@ -42,9 +42,9 @@ header {
 
 .container {
     display: flex;
-    flex: 1;
     max-width: 100%;
     width: 100%;
+    justify-content: center;
 }
 
 .column {
@@ -63,12 +63,11 @@ header {
 }
 
 .main {
-    flex: 1;
     background-color: var(--bg-color);
     min-width: 0;
     max-width: 100%;
     display: flex;
-    justify-content: center; /* Add this line */
+    justify-content: center;
 }
 
 .sticky-div {
@@ -93,9 +92,6 @@ header {
     border-radius: 2px;
 }
 
-.content {
-    flex-grow: 1;
-}
 
 .main .content {
     max-width: var(--main-content-max-width);
@@ -103,6 +99,7 @@ header {
     padding-left: var(--gap-lg);
     padding-right: var(--gap-lg);
     box-sizing: border-box;
+    margin: 0 auto;
 }
 
 /* Add this new rule */
@@ -132,8 +129,8 @@ header {
     .main .content {
         padding-left: var(--gap-md);
         padding-right: var(--gap-md);
-        max-width: min(100%, var(--main-content-max-width)); /* Change this line */
-        margin: 0 auto; /* Add this line */
+        max-width: min(100%, var(--main-content-max-width));
+        margin: 0 auto; 
     }
     .main {
         max-width: 100%;
@@ -166,18 +163,12 @@ a:hover {
     text-decoration: underline;
 }
 
-/* a:visited {
-    color: var(--theme-color-dark);
-    text-decoration: none;
-} */
-
 /* Hover effect (optional) */
 header nav ul li a:hover {
     text-decoration: underline;
 }
 
 .container {
-    width: 100%;
     max-width: 100%;
     margin: 0 auto;
     padding: 0;
