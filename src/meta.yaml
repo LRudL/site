@@ -118,7 +118,7 @@
   description: "Notes on three of Walter Isaacson's biographies."
   math: false
   type: ["book reviews", "nonfiction"]
-  tags: ["history"]
+  tags: ["misc"]
   elsewhere: ["https://strataoftheworld.blogspot.com/2021/09/short-reviews-biographies.html"]
 
 - label: pleasures-of-counting
@@ -206,12 +206,12 @@
   elsewhere: ["https://strataoftheworld.blogspot.com/2018/10/more-energy-and-more-civilization.html"]
 
 - label: short-reviews-nonfiction-1
-  title: "Short reviews: nonfiction (1)"
+  title: "Short reviews - nonfiction - 1"
   date: 2020-05-09
   description: "Brief notes on various nonfiction books."
   math: false
   type: ["book reviews", "nonfiction"]
-  tags: ["computing", "history", "physics"]
+  tags: ["misc"]
   sublist: 
     - "Security Engineering"
     - "Origin Story: A Big History of Everything"
@@ -250,12 +250,12 @@
   elsewhere: ["https://strataoftheworld.blogspot.com/2018/06/review-baroque-cycle-neal-stephenson.html"]
 
 - label: short-reviews-fiction-1
-  title: "Short reviews: fiction (1)"
+  title: "Short reviews - fiction - 1"
   date: 2020-05-09
   description: "Brief notes on various fiction books."
   math: false
   type: ["book reviews", "fiction"]
-  tags: ["computing"]
+  tags: ["misc"]
   sublist:
     - "Unsong"
     - "The Curse of Chalion"
@@ -388,7 +388,7 @@
   description: "Doing research means answering questions no one yet knows the answer to. This post tries to find and describe the core parts of being good at this"
   math: false
   type: ["general"]
-  tags: ["skills"]
+  tags: ["misc"]
   elsewhere: ["https://www.lesswrong.com/posts/NyGgegFATfsyuGFo4/a-model-of-research-skill", "https://www.strataoftheworld.com/2024/01/a-model-of-research-skill.html", "https://forum.effectivealtruism.org/posts/KqTH5Yvxv3LbvcQz2/a-model-of-research-skill"]
 
 - label: positive-visions-for-ai
