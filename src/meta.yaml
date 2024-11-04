@@ -16,6 +16,7 @@
   type: ["general"]
   tags: ["civilisation"]
   sequel: wisdom2
+  elsewhere: ["https://www.lesswrong.com/posts/4WLQvcgDWxeuFRymz/ai-and-wisdom-1-wisdom-amortised-optimisation-and-ai"]
 
 - label: wisdom2
   title: "AI & wisdom 2: growth and amortised optimisation"
@@ -26,6 +27,7 @@
   tags: ["civilisation"]
   sequel: wisdom3
   prequel: wisdom1
+  elsewhere: ["https://www.lesswrong.com/posts/SoGpdNMsWpzPEwjNJ/ai-and-wisdom-2-growth-and-amortised-optimisation"]
 
 - label: wisdom3
   title: "AI & wisdom 3: AI effects on amortised optimisation"
@@ -35,6 +37,7 @@
   type: ["general"]
   tags: ["civilisation", "AI"]
   prequel: wisdom2
+  elsewhere: ["https://www.lesswrong.com/posts/QrJAcpapGyG4LMpDi/ai-and-wisdom-3-ai-effects-on-amortised-optimisation", "https://nosetgauge.substack.com/p/ai-and-wisdom-3-ai-effects-on-amortised"]
 
 - label: infotheory1
   title: Information Theory 1
