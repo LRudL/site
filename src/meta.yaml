@@ -1,3 +1,12 @@
+- label: survival-without-dignity
+  title: "Survival without dignity"
+  date: 2024-11-04
+  description: "A short story about how civilisation makes it through the 21st century."
+  math: false
+  type: ["fiction"]
+  tags: ["satire"]
+  elsewhere: ["https://nosetgauge.substack.com/p/survival-without-dignity", "https://www.lesswrong.com/posts/BarHSeciXJqzRuLzw/survival-without-dignity"]
+
 - label: sad
   title: "Me, Myself, and AI: The Situational Awareness Dataset (SAD) for LLMs"
   date: 2024-07-08
