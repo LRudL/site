@@ -52,7 +52,7 @@ I think this might be because in the 1980s it was difficult to imagine a decentr
 
 
 
-**Justice and the medium**
+## Justice and the medium
 
 Here’s Postman’s example of justice in an oral culture:
 
