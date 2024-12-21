@@ -130,7 +130,7 @@ def generate_html(posts: list[Post], templates_dir: str = "templates", out_dir: 
 def generate_post_page(env: Environment, post: Post, context: dict, out_dir: str, posts: list[Post]):
     post_template = env.get_template("post.html")
     
-    extensions: list[str | LatexExtension] = ['fenced_code', 'tables']
+    extensions: list[str | LatexExtension] = ['fenced_code', 'tables', 'sane_lists'] #, 'markdown.extensions.def_list', 'markdown.extensions.smarty', 'markdown.extensions.attr_list', 'markdown.extensions.extra']
     if post.meta.math:
         latex_ext = LatexExtension()
         extensions.append(latex_ext)

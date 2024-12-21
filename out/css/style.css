@@ -343,6 +343,9 @@ h1, h2, h3, h4, h5, h6 {
 blockquote {
     font-style: italic;
     color: #333;
+    border-left: 1px solid var(--theme-color-highlights);
+    margin: var(--gap-md) 0;
+    padding-left: var(--gap-md);
 }
 
 code {
