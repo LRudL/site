@@ -5,7 +5,11 @@
   math: false
   type: ["book reviews", "nonfiction"]
   tags: ["strategy"]
-  elsewhere: []
+  elsewhere:
+    [
+      "https://nosetgauge.substack.com/p/review-good-strategy-bad-strategy",
+      "https://www.lesswrong.com/posts/4rSWMjW6MDWt28Qtc/review-good-strategy-bad-strategy",
+    ]
 
 - label: survival-without-dignity
   title: "Survival without dignity"
