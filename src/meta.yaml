@@ -1,3 +1,16 @@
+- label: planecrash
+  title: "Review: Planecrash"
+  date: 2024-12-27
+  description: "A review of a weird but philosophically-dense work of fiction."
+  math: false
+  type: ["book reviews", "fiction"]
+  tags: ["misc"]
+  elsewhere:
+    [
+      "https://nosetgauge.substack.com/p/review-planecrash",
+      "https://www.lesswrong.com/posts/zRHGQ9f6deKbxJSji/review-planecrash",
+    ]
+
 - label: good-strategy-bad-strategy
   title: "Review: Good Strategy, Bad Strategy"
   date: 2024-12-21
