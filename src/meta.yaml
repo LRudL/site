@@ -1,3 +1,16 @@
+- label: capital-agi-and-ambition
+  title: "Capital, AGI, and human ambition"
+  date: 2024-12-28
+  description: "By default, capital will matter more than ever after transformative AI is achieved."
+  math: false
+  type: ["general"]
+  tags: ["civilisation", "AI"]
+  elsewhere:
+    [
+      "https://nosetgauge.substack.com/p/review-planecrash",
+      "https://www.lesswrong.com/posts/zRHGQ9f6deKbxJSji/review-planecrash",
+    ]
+
 - label: planecrash
   title: "Review: Planecrash"
   date: 2024-12-27
