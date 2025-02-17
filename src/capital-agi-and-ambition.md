@@ -48,7 +48,7 @@ If you want to convert money into results, the deepest problem you are likely to
 2. Talent is rare (and credentialed talent even more so—and many actors can't afford to rely on any other kind, because of point 1), so there's just not very much of it going around.
 3. Even if you can locate the top talent, the top talent tends to be *less* amenable to being bought out by money than others.
 
-(Of course, those with money keep building infrastructure that makes it easier to convert money into results. I have seen first-hand the largely-successful quest by quant finance companies to strangle out all existing ambition out of top UK STEM grads and replace it with the eking of tiny gains in financial markets. Mammon must be served!)
+(Of course, those with money keep building infrastructure that makes it easier to convert money into results. I have seen first-hand the largely-successful quest by quant finance companies to strangle out all existing [ambition](https://space.ong.ac/escaping-flatland) out of top UK STEM grads and replace it with the eking of tiny gains in financial markets. Mammon must be served!)
 
 With labour-replacing AI, these problems go away.
 
@@ -120,7 +120,7 @@ All this means that *the ability to get and wield power in the real world withou
 
 ## Enforced equality is unlikely
 
-*The Great Leveler* is a [good book](http://localhost:8000/out/short-reviews-nonfiction-1/#section-3) on the history of inequality that ([at least per the author](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4939891)) has survived its critiques fairly well. Its conclusion is that past large reductions in inequality have all been driven by one of the "Four Horsemen of Leveling": total war, violent revolution, state collapse, and pandemics. Leveling income differences has historically been hard enough to basically never happen through conscious political choice.
+*The Great Leveler* is a [good book](https://rudolf.website/short-reviews-nonfiction-1/#section-3) on the history of inequality that ([at least per the author](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4939891)) has survived its critiques fairly well. Its conclusion is that past large reductions in inequality have all been driven by one of the "Four Horsemen of Leveling": total war, violent revolution, state collapse, and pandemics. Leveling income differences has historically been hard enough to basically never happen through conscious political choice.
 
 Imagine that labour-replacing AI is here. UBI is passed, so no one is starving. There's a massive scramble between countries and companies to make the best use of AI. This is all capital-intensive, so everyone needs to woo holders of capital. The top AI companies wield power on the level of states. The redistribution of wealth is unlikely to end up on top of the political agenda.
 
