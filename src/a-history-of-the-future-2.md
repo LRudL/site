@@ -1,6 +1,8 @@
 ![](img/a-history-of-the-future-2/martin.png)
 Above: *The Eve of the Deluge*. (John Martin)
 
+(see part 1 [here](https://rudolf.website/a-history-of-the-future-1/))
+
 ## The AGI frog is getting boiled
 
 As mentioned in part 1, a brief market correction happened in late 2026. In 2027, OpenAI releases o7 to try to shore up excitement and new investments. It’s much more reliable than o6 and can now do a lot of office work on a computer entirely autonomously and without frequent correction. OpenAI sells it for $500/month. Altman states “AGI achieved” and sets a goal of $1T in annualised revenues in 2029. OpenAI raises another massive funding round.

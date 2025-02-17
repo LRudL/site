@@ -1,6 +1,8 @@
 ![](img/a-history-of-the-future-3/martin.png)
 Above: *The Great Day of His Wrath*. (John Martin)
 
+(see [Part 1](https://rudolf.website/a-history-of-the-future-1/) and [Part 2](https://rudolf.website/a-history-of-the-future-2/))
+
 ## The end of white-collar work and the new job scene
 
 By the late 2020s, office jobs in developed countries are now basically about overseeing and providing direction to AI systems, and the last part of that is mostly on-paper rather than in practice. There is lots of talk about values and missions and the future, and a lot of unspoken communication about office politics and status. Many office workers don’t do much at all. Concretely, they might get to work, have a team standup, check in on how the AIs are doing, have some ritualistic meetings with their manager and any employees they have, and rubber-stamp some AI decisions that they’re contractually or legally obliged to stamp, with this adding up to only a few hours. Occasionally they might decide to change some goal the AIs have been given, but that requires just speaking or typing a paragraph. Many people feel guilty about this, but it’s mostly a quiet guilt. They fill their time with office chat or scrolling on their phones. Many companies become more social and more about community. HR has never been more influential. Everything’s both more cuddly and/or more viciously political now that the ugly raw realities of individual competence don't matter any more.
