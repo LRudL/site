@@ -1,7 +1,7 @@
 
 Below is part 1 of an extended scenario describing how the future might go if current trends in AI continue. The scenario is deliberately extremely specific: it’s definite rather than indefinite, and makes concrete guesses instead of settling for banal generalities or abstract descriptions of trends.
 
-Thanks to [Luke Drago](https://lukedrago.substack.com/), Duncan McClements, and Theo Horsley for comments.
+Thanks to [Luke Drago](https://lukedrago.substack.com/), Duncan McClements, Theo Horsley, and Bilal Chughtai for comments.
 
 ![](img/a-history-of-the-future-1/beksinski.png)
 Above: *Open Sky*. (Zdislaw Beksinsksi)
