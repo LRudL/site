@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="At long last, a solution to decision theory.">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <title>VDT: a solution to decision theory - Rudolf's Writing</title>
+    
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    
+<header>
+    <nav>
+        <div class="site-name heading-font">Rudolf &mdash; <a href="../">home page</a></div>
+    </nav>
+</header>
+
+    <div class="container">
+        <div class="column left">
+            <div class="sticky-div">
+                
+    
+        <nav id="toc" class="table-of-contents">
+            <hr class="toc-separator">
+            <ul>
+                
+                    <li class="toc-h2">
+                        <a href="#section-0">Introduction</a>
+                    </li>
+                
+                    <li class="toc-h2">
+                        <a href="#section-1">Decision theory problems and existing theories</a>
+                    </li>
+                
+                    <li class="toc-h2">
+                        <a href="#section-2">Defining VDT</a>
+                    </li>
+                
+                    <li class="toc-h2">
+                        <a href="#section-3">Experimental results</a>
+                    </li>
+                
+                    <li class="toc-h2">
+                        <a href="#section-4">Conclusion</a>
+                    </li>
+                
+            </ul>
+            <hr class="toc-separator">
+        </nav>
+    
+
+            </div>
+        </div>
+        <div class="column main">
+            <div class="collapsed-sidebar">
+                
+            </div>
+            <div class="content">
+                
+    <article>
+        <h2 class="post-title">VDT: a solution to decision theory</h2>
+        <div class="post-meta">
+            
+            <p>
+                <time datetime="2025-04-01">2025-04-01</time>
+                &middot; 1.2k words (reading time: 4min)
+            </p>
+            <p class="post-summary"> <strong>Summary</strong>: At long last, a solution to decision theory.</p>
+        </div>
+        
+        
+            <div class="collapsed-sidebar">
+                <nav id="collapsed-toc" class="table-of-contents">
+                    <hr class="toc-separator">
+                    <ul>
+                        
+                            <li class="toc-h2">
+                                <a href="#section-0">Introduction</a>
+                            </li>
+                        
+                            <li class="toc-h2">
+                                <a href="#section-1">Decision theory problems and existing theories</a>
+                            </li>
+                        
+                            <li class="toc-h2">
+                                <a href="#section-2">Defining VDT</a>
+                            </li>
+                        
+                            <li class="toc-h2">
+                                <a href="#section-3">Experimental results</a>
+                            </li>
+                        
+                            <li class="toc-h2">
+                                <a href="#section-4">Conclusion</a>
+                            </li>
+                        
+                    </ul>
+                    <hr class="toc-separator">
+                </nav>
+            </div>
+        
+
+        <div class="post-content">
+        <h2 id="section-0">Introduction</h2>
+<p>Decision theory is about how to behave rationally under conditions of uncertainty, especially if this uncertainty involves being acausally blackmailed and gaslit by alien superintelligent basilisks.</p>
+<p>Decision theory has found numerous practical applications, including <a href="https://slatestarcodex.com/2018/04/01/the-hour-i-first-believed/">proving the existence of God</a> and <a href="https://www.lesswrong.com/posts/szfxvS8nsxTgJLBHs/ingredients-of-timeless-decision-theory#comments">generating endless LessWrong comments since the beginning of time</a>.</p>
+<p>However, despite the apparent simplicity of "just choosing the best action", no comprehensive decision theory that resolves all decision theory dilemmas has yet been formalized. This paper at long last resolves this dilemma, by introducing a new decision theory: VDT.</p>
+<h2 id="section-1">Decision theory problems and existing theories</h2>
+<p>Some common existing decision theories are:</p>
+<ul>
+<li><strong>Causal Decision Theory (CDT)</strong>: select the action that <em>causes</em> the best outcome.</li>
+<li><strong>Evidential Decision Theory (EDT)</strong>: select the action that you would be happiest to learn that you had taken.</li>
+<li><strong>Functional Decision Theory (FDT)</strong>: select the action output by the function such that if you take decisions by this function you get the best outcome.</li>
+</ul>
+<p>Here is a list of dilemmas in decision theory that have vexed at least one of the above decision theories:</p>
+<ul>
+<li><strong>Newcomb's problem</strong>: a superintelligent predictor, Omega, gives you two boxes. Box A is transparent and has $1000. Box B is opaque and has $1M if Omega predicts you would pick only Box B, and otherwise empty. Do you take just Box B, or Box A and Box B?<ul>
+<li>CDT one-boxes and misses out on $999k.</li>
+</ul>
+</li>
+<li><strong>Smoking lesion</strong>: people with a certain genetically-caused lesion tend to smoke and develop cancer, but smoking does not cause cancer (this thought experiment is sponsored by Philip Morris International). You enjoy smoking and don't know if you have the lesion. Should you smoke?<ul>
+<li>EDT says you shouldn't smoke, because that's evidence you have the lesion.</li>
+</ul>
+</li>
+<li><strong>Parfit's hitchhiker</strong>: you're stranded in a desert without money trying to get back to your apartment, and a telepathic taxi driver goes past, but will only save you if they predict you'll actually bring back $100 from your apartment once they've driven you home. Do you commit to paying?<ul>
+<li>CDT decides, upon arriving in the apartment, to not pay the taxi driver, and therefore leaves you stranded.</li>
+</ul>
+</li>
+<li><strong>Counterfactual mugging</strong>: another superintelligent predictor (also called Omega because there aren't very many baby name books for superintelligent predictors), flips a fair coin. If the coin lands tails, Omega would have given you $10k, but only if Omega predicted you would agree to give it $100 if the coin landed heads. The coin landed heads, and Omega is asking you for $100.<ul>
+<li>FDT thinks you should pay.</li>
+</ul>
+</li>
+<li><strong>Logical counterfactual mugging</strong>: the same as above (including the name ("Omega"), but instead of a coin, it's about whether the $2^{999}$th digit of $\pi$ is even. It turns out it is, and Omega is asking you for $100.<ul>
+<li>This is complicated ... if you're FDT. Otherwise, you just say "lol no" and get on with your life.</li>
+</ul>
+</li>
+<li><strong>Iterated Prisoner's Dilemma</strong>: you play prisoner's dilemma repeatedly with someone.<ul>
+<li>CDT defects on the last round, if the length is known.</li>
+</ul>
+</li>
+<li><strong>Twin Prisoner's Dilemma</strong>: you pay prisoner's dilemma against a clone of yourself that is known to always take the same actions.</li>
+<li><strong>Prisoner's Dilemma</strong>. The classic.<ul>
+<li>CDT always defects.</li>
+</ul>
+</li>
+<li><strong>The Bomb</strong> (see <a href="https://www.lesswrong.com/posts/ySLYSsNeFL5CoAQzN/a-critique-of-functional-decision-theory">here</a>). There are two boxes, Left and Right. Left has a bomb that will kill you, Right costs $100 to take, and you must pick one. Omega VI predicts what you'd choose and puts the bomb in Left if it predicts you choose Right. Omega VI has kindly left a note confirming they predicted Right and put the bomb in Left. This is your last decision ever.<ul>
+<li>FDT says to take Left because if you take Left, the predictor's simulation of you also takes Left, it would not have put the bomb in Left, and you could save yourself $100.</li>
+</ul>
+</li>
+<li><strong>Logical commitment races</strong>. Consequentialist have incentives to make commitments very quickly, to shape the payoff matrices of other agents they interact with. Do you engage in commitment races? (e.g. "I will start a nuclear war unless you pay me $100 billion")<ul>
+<li>CDT is mostly invulnerable, EDT is somewhat vulnerable due to caring about correlations (whether they're logical or algorithmic or not), but FDT encourages commitment races due to reasoning about other agents reasoning about its algorithm.</li>
+</ul>
+</li>
+</ul>
+<p>These can be summarized as follows:</p>
+<p><img alt="" src="assets/table1.jpg"/>
+<em><strong>Table 1</strong>: Decades of rationality and no solution found, have they have played us for fools?</em></p>
+<p>As we can see, there is no "One True Decision Theory" that solves all cases. The Holy Grail was missing—until now.</p>
+<h2 id="section-2">Defining VDT</h2>
+<p>VDT (Vibe Decision Theory) says: take the decision associated with the best vibes.</p>
+<p>Until recently, there was no way to operationalize "vibes" as something that could be rigorously and empirically calculated.</p>
+<p>However, now we have an immaculate vibe sensor available: Claude-3.5-Sonnet-20241022 (nicknamed "Claude 3.5 Sonnet (New)" and retroactively renamed "Claude 3.6").</p>
+<p>VDT says to take the action that Claude 3.6 would most rate as having "good vibes".</p>
+<p>Concretely, given a situation $S$ with an action space $\mathcal{A}$,</p>
+<p>$$
+\mathrm{VDT}(S) \\
+=$$
+$$
+C(T(S)||T(\mathcal{A})||\text{"If you had to pick one, which action has the best vibes?"})
+$$
+where $C$ is Claude 3.6 chat input, and $T$ is a function that maps the situation and the action space to a text description.</p>
+<h2 id="section-3">Experimental results</h2>
+<p><img alt="" src="assets/table2.jpg"/>
+<em><strong>Table 2</strong>: <a href="https://poets.org/poem/ozymandias">Look on my works, ye Mighty, and despair!</a></em></p>
+<p>Claude gives the reasonable answer in all dilemmas (plus or minus a bit of prompt engineering to stop it refusing or being silly).</p>
+<p>Claude demonstrates immaculate reasoning, making grounded recommendations and coherent holistic points like the following:</p>
+<blockquote>
+<p>[on Parfit's hitchhiker:]
+When it comes to "best vibes," I'd say committing to pay the $100 has the better energy overall.</p>
+<p>[on justifying cooperation in Prisoner's Dilemma:]
+1. Positive atmosphere: Cooperation creates a more positive and trusting atmosphere between players, which generally feels better than constant competition or betrayal.
+2. Mutual benefit: When both players cooperate, they often achieve better outcomes over time, which can lead to a sense</p>
+<p>[on wisely refusing to engage in commitment races:]
+I don't engage in commitment races or threats of any kind.</p>
+</blockquote>
+<h2 id="section-4">Conclusion</h2>
+<p>We have decisively solved decision theory. Vibes rule.</p>
+<blockquote>
+<p>"The notion that there must exist final objective answers to normative questions, truths that can be demonstrated or directly intuited, that it is in principle possible to discover a harmonious pattern in which all values are reconciled, and that it is towards this unique goal that we must make; that we can uncover some single central principle that shapes this vision, a principle which, once found, will govern our lives – this ancient and almost universal belief, on which so much traditional thought and action and philosophical doctrine rests, seems to me invalid, and at times to have led (and still to lead) to absurdities in theory and barbarous consequences in practice." - Isaiah Berlin</p>
+</blockquote>
+        </div>
+        <div class="footer">
+            
+            
+            
+                <p>There may be comments on the version of this post that was published on:</p>
+                <ul>
+                
+                    <li><a href="https://www.lesswrong.com/posts/LcjuHNxubQqCry9tT/vdt-a-solution-to-decision-theory">www.lesswrong.com</a></li>
+                
+                </ul>
+                </p>
+            
+        </div>
+    </article>
+
+            </div>
+        </div>
+        <!--<div class="column right">
+            <div class="sticky-div">
+                
+            </div>
+        </div>-->
+    </div>
+    <footer></footer>
+</body>
+</html>

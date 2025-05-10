@@ -15,7 +15,8 @@
     --gap-lg: 2rem;
 }
 
-body, html {
+body,
+html {
     position: relative;
     margin: 0;
     padding: 0;
@@ -60,7 +61,7 @@ header {
 }
 
 .right {
-  width: 0px;
+    width: 0px;
 }
 
 .content {
@@ -121,18 +122,23 @@ img {
         transform: none;
         padding-right: 0;
     }
-    .left, .right {
+
+    .left,
+    .right {
         display: none;
     }
+
     .collapsed-sidebar {
         display: block;
     }
+
     .main {
         padding-left: var(--gap-md);
         padding-right: var(--gap-md);
         max-width: min(100%, var(--main-content-max-width));
-        margin: 0 auto; 
+        margin: 0 auto;
     }
+
     .post-content {
         border-top: 0px !important;
     }
@@ -159,6 +165,7 @@ a:active {
     color: var(--theme-color);
     text-decoration: none;
 }
+
 a:hover {
     text-decoration: underline;
 }
@@ -200,11 +207,25 @@ hr.toc-separator {
     border-bottom: 1px solid var(--border-color);
 }
 
-.table-of-contents .toc-h2 { padding-left: 1rem; }
-.table-of-contents .toc-h3 { padding-left: 2rem; }
-.table-of-contents .toc-h4 { padding-left: 3rem; }
-.table-of-contents .toc-h5 { padding-left: 4rem; }
-.table-of-contents .toc-h6 { padding-left: 5rem; }
+.table-of-contents .toc-h2 {
+    padding-left: 1rem;
+}
+
+.table-of-contents .toc-h3 {
+    padding-left: 2rem;
+}
+
+.table-of-contents .toc-h4 {
+    padding-left: 3rem;
+}
+
+.table-of-contents .toc-h5 {
+    padding-left: 4rem;
+}
+
+.table-of-contents .toc-h6 {
+    padding-left: 5rem;
+}
 
 .table-of-contents a {
     text-decoration: none;
@@ -230,7 +251,12 @@ hr.toc-separator {
     font-family: var(--sans-serif-font);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--sans-serif-font);
     font-weight: bold;
     line-height: 1.4em;
@@ -308,22 +334,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Show active tab content */
-#tab1:checked ~ #chronological,
-#tab2:checked ~ #type,
-#tab3:checked ~ #topic {
+#tab1:checked~#chronological,
+#tab2:checked~#type,
+#tab3:checked~#topic {
     display: block;
 }
 
 /* Style for active tab button */
-#tab1:checked ~ .tab-buttons label[for="tab1"],
-#tab2:checked ~ .tab-buttons label[for="tab2"],
-#tab3:checked ~ .tab-buttons label[for="tab3"] {
+#tab1:checked~.tab-buttons label[for="tab1"],
+#tab2:checked~.tab-buttons label[for="tab2"],
+#tab3:checked~.tab-buttons label[for="tab3"] {
     border: 2px solid var(--theme-color-highlights);
     color: var(--theme-color-highlights);
     font-weight: bold;
 }
 
-.link-heading{
+.link-heading {
     font-style: italic;
     font-family: var(--sans-serif-font);
 }

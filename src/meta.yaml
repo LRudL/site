@@ -1,3 +1,30 @@
+- label: intelligence-curse-series
+  title: "The Intelligence Curse: an essay series"
+  date: 2025-04-01
+  description: "Solving human irrelevance in the face of AI"
+  coauthors: ["Luke Drago"]
+  math: false
+  type: ["general"]
+  tags: ["civilisation", "AI"]
+  elsewhere:
+    [
+      "https://intelligence-curse.ai/",
+      "https://nosetgauge.substack.com/p/the-intelligence-curse-an-essay-series",
+      "https://www.lesswrong.com/posts/LCFgLY3EWb3Gqqxyi/the-intelligence-curse-an-essay-series",
+    ]
+
+- label: vdt
+  title: "VDT: a solution to decision theory"
+  date: 2025-04-01
+  description: "At long last, a solution to decision theory."
+  math: true
+  type: ["humour"]
+  tags: ["satire"]
+  elsewhere:
+    [
+      "https://www.lesswrong.com/posts/LcjuHNxubQqCry9tT/vdt-a-solution-to-decision-theory",
+    ]
+
 - label: a-history-of-the-future-3
   title: "A History of the Future, 2030-2040"
   date: 2025-02-17
