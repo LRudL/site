@@ -1,3 +1,16 @@
+- label: technology-of-liberalism
+  title: "The Technology of Liberalism"
+  date: 2026-01-05
+  description: "Two frames generated modern morality: utilitarianism (maximize welfare) and liberalism (protect everyone's freedom). We should differentially advance freedom-protecting technology so that the post-AI world remains good in many senses, not just the overly-narrow utilitarian one that much AI discourse assumes."
+  math: false
+  type: ["general"]
+  tags: ["civilisation", "AI"]
+  elsewhere:
+    [
+      "https://www.nosetgauge.com/p/the-technology-of-liberalism",
+      "https://www.lesswrong.com/posts/J363Nns4n99TBKZMx/the-technology-of-liberalism"
+    ]
+
 - label: intelligence-curse-series
   title: "The Intelligence Curse: an essay series"
   date: 2025-04-01
